@@ -2,6 +2,7 @@
 import tDotsI from './3dotsIcon.svg'
 
 // Header Icons
+import NovoI from './novo_logo_main.svg'
 import NotiI from './header_noti.svg'
 import MsgI from './header_msg.svg'
 import BookI from './header_bookmark.svg'
@@ -20,6 +21,7 @@ import PlusI from './bb_add_communities.svg'
 export {
     tDotsI,
 
+    NovoI,
     NotiI,
     MsgI,
     BookI,

@@ -2,7 +2,16 @@
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      flex: {
+        "25": "0, 0, 25%",
+        "50": "0, 0, 50%"
+      },
+      maxWidth: {
+        "1/2": "50%",
+        "1/4": "25%"
+      }
+    },
   },
   plugins: [],
 };
