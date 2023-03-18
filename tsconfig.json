@@ -22,13 +22,14 @@
     }
   },
   "include": [
+    "custom.d.ts",
     ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "**/*.svg"
+    "**/*.svg",
   ],
   "exclude": ["node_modules"]
 }

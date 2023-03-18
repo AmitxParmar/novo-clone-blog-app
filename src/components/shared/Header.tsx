@@ -1,13 +1,13 @@
 import React from 'react'
-import { NovoI, NotiI, MsgI, BookI, SideOpenI } from 'public'
+import { NovoI, NotiI, MsgI, BookI, SideOpenI, defaultImg } from 'src/assets'
 import Image from 'next/image'
 import Link from 'next/link';
+import { signIn, useSession } from 'next-auth/react';
 
-interface IHeader {
-    userProfile: string
-}
 
-const Header: React.FC<IHeader> = ({ userProfile }) => {
+const Header: React.FC = () => {
+    const { data: sessionData } = useSession()
+    console.log(sessionData)
     return (
         <div>
             {/* NAV_SPACER */}
@@ -24,7 +24,7 @@ const Header: React.FC<IHeader> = ({ userProfile }) => {
                     </button>
 
                     {/* HEADER ITEMS */}
-                    <div className='flex flex-wrap  -mx-4 items-center'>
+                    <div className='flex flex-wrap justify-between  -mx-4 items-center'>
                         {/* NOVO LOGO */}
                         <div className='static flex max-w-1/4 xl: xl:flex-1/4 '>
                             <Link href="/" aria-label="home page" className="m-0 text-white inline-block py-[.1925rem] text-xl whitespace-nowrap">
@@ -37,47 +37,56 @@ const Header: React.FC<IHeader> = ({ userProfile }) => {
 
                         {/* CTA */}
                         <div className="relative lg:flex-[0_0_33.33333333%] xl:flex-1/4  max-w-1/4 w-full px-4">
-                            <div className="flex pl-0 mb-0 list-none flex-row items-center justify-end">
+                            <div className="flex  pl-0 mb-0 list-none flex-row items-center justify-end">
                                 {/* Messages Icon */}
-                                <div className="md:ml-4 ml-2">
-                                    <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
-                                        href="/messages"
-                                    >
-                                        <span className='inline-flex items-center justify-center align-middle'>
-                                            <Image src={MsgI} alt='Messages' />
-                                        </span>
-                                    </Link>
-                                </div>
-                                {/* Bookmarks Icon */}
-                                <div className="md:ml-4 ml-2">
-                                    <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
-                                        href="/messages"
-                                    >
-                                        <span className='inline-flex items-center justify-center align-middle'>
-                                            <Image src={MsgI} alt='Messages' />
-                                        </span>
-                                    </Link>
-                                </div>
-                                {/* Notifications */}
-                                <div className="md:ml-4 ml-2">
-                                    <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
-                                        href="/messages"
-                                    >
-                                        <span className='inline-flex items-center justify-center align-middle'>
-                                            <Image src={MsgI} alt='Messages' />
-                                        </span>
-                                    </Link>
-                                </div>
-                                {/* Profile */}
-                                <div className="md:ml-4 ml-2">
-                                    <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
-                                        href="/messages"
-                                    >
-                                        <span className='inline-flex items-center justify-center align-middle'>
-                                            <Image src={MsgI} alt='Messages' />
-                                        </span>
-                                    </Link>
-                                </div>
+
+                                {sessionData ? (
+                                    <>
+                                        <div className="md:ml-4 ml-2">
+                                            <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
+                                                href="/messages"
+                                            >
+                                                <span className='inline-flex items-center justify-center align-middle'>
+                                                    <Image src={MsgI} alt='Messages' />
+                                                </span>
+                                            </Link>
+                                        </div>
+                                        {/* Bookmarks Icon */}
+                                        <div className="md:ml-4 ml-2">
+                                            <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
+                                                href=""
+                                            >
+                                                <span className='inline-flex items-center justify-center align-middle'>
+                                                    <Image src={BookI} alt='Bookmark' />
+                                                </span>
+                                            </Link>
+                                        </div>
+                                        {/* Notifications */}
+                                        <div className="md:ml-4 ml-2">
+                                            <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
+                                                href="/messages"
+                                            >
+                                                <span className='inline-flex items-center justify-center align-middle'>
+                                                    <Image src={NotiI} alt='notifications' />
+                                                </span>
+                                            </Link>
+                                        </div>
+                                        {/* Profile */}
+                                        <div className="md:ml-4 ml-2">
+                                            <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full bg-white object-cover'
+                                                href="/"
+                                            >
+                                                <span className='inline-flex items-center justify-center align-middle '>
+                                                    <Image className='rounded-full bg-white' src={defaultImg} alt='Messages' />
+                                                </span>
+                                            </Link>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <button className='bg-blue-500/2 text-white rounded-sm p-2 opacity-50' onClick={() => signIn()}>
+                                        Login
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>
