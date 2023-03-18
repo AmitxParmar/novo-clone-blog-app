@@ -36,12 +36,12 @@ const Sidebar: React.FC = () => {
                         {/* SIDEBAR FEATURES BUTTONS */}
                         <div>
                             {nav_features.map((feature) => (
-                                <div key={feature.id} className="mb-4">
+                                <div key={feature.id} title={feature.path} className="mb-4">
                                     <Link href={feature.path}
                                         className={`${active === feature.path ? ' bg-black ' : ''} 
                                         text-gray-dark hover:bg-light flex items-center whitespace-nowrap w-10 h-10 px-2 relative transition rounded-full p-1.5`}
                                         onClick={() => setActive(feature.path)}>
-                                        <span className="inline-flex items-center justify-center w-6 h-6 leading-none whitespace-nowrap">
+                                        <span className="inline-flex            items-center justify-center w-6 h-6 leading-none whitespace-nowrap">
                                             <Image src={feature.icon} alt={feature.name} />
                                         </span>
                                     </Link>

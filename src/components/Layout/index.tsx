@@ -12,8 +12,8 @@ const Layout: FC<ILayout> = ({ children }) => {
             <div>
                 <Header />
                 <Sidebar />
-                <div className='pl-16'>
-                    <div className='lg:px-[72px] md:px-8'>
+                <div className='pl-16 h-screen bg-light'>
+                    <div className='lg:px-[72px]  md:px-8'>
                         {children ?? null}
                     </div>
                 </div>
