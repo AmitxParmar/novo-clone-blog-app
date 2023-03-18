@@ -22,13 +22,9 @@ const CreatePost: React.FC = () => {
                                 </Link>
                             </div>
                             <button className='w-full rounded-lg flex justify-start items-center h-11 cursor-text pl-3.5 text-secondary text-base ml-4 overflow-visible text-'>
-
                             </button>
-
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>

@@ -3,9 +3,11 @@ import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import { api } from "~/utils/api";
 
+import Layout from "~/components/Layout";
+
 import "~/styles/globals.css";
-import Header from '~/components/shared/Header';
-import Sidebar from './../components/shared/Sidebar';
+import Sidebar from "~/components/shared/Sidebar";
+
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -13,8 +15,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <Header />
-      <Component {...pageProps} />
+      <Layout >
+        <Component {...pageProps} />
+      </Layout>
     </SessionProvider>
   );
 };
