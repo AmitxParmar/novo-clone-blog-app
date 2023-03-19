@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react'
-import { NovoI, NotiI, MsgI, BookI, defaultImg, SideOpenI } from 'src/assets'
+import { NovoI, NotiI, MsgI, BookI, defaultImage, SideOpenI } from 'src/assets'
 import Image from 'next/image'
 import Link from 'next/link';
 /* import { signIn, useSession } from 'next-auth/react'; */
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
                                             href="/"
                                         >
                                             <span className='inline-flex items-center justify-center align-middle '>
-                                                <Image className='rounded-full bg-white' src={`https://firebasestorage.googleapis.com/v0/b/remote-students-community-app.appspot.com/o/DefaultProfilePic.jpg?alt=media&token=cfc326ef-1ceb-401e-8060-6209a5faafd0`}
+                                                <Image className='rounded-full bg-white' src={defaultImage}
                                                     alt='Messages'
                                                     height={32}
                                                     width={32} />
