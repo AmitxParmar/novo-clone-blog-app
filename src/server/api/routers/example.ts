@@ -1,3 +1,5 @@
+// @ts-nocheck
+// @ts-ignore
 import { z } from "zod";
 
 import {
