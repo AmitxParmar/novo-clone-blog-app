@@ -78,7 +78,10 @@ const Header: React.FC = () => {
                                             href="/"
                                         >
                                             <span className='inline-flex items-center justify-center align-middle '>
-                                                <Image className='rounded-full bg-white' src={defaultImg} alt='Messages' />
+                                                <Image className='rounded-full bg-white' src={`https://firebasestorage.googleapis.com/v0/b/remote-students-community-app.appspot.com/o/DefaultProfilePic.jpg?alt=media&token=cfc326ef-1ceb-401e-8060-6209a5faafd0`}
+                                                    alt='Messages'
+                                                    height={32}
+                                                    width={32} />
                                             </span>
                                         </Link>
                                     </div>

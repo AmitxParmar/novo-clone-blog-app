@@ -13,7 +13,7 @@ const config = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'firebasestorage.googleapis.**',
+        hostname: 'firebasestorage.googleapis.com',
       },
       {
         protocol: 'https',

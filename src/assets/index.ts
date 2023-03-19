@@ -19,7 +19,7 @@ import SideOpenI from './side_open.svg'
 import PlusI from './bb_add_communities.svg'
 
 // Default Image
-import defaultImg from './default_user.png'
+const defaultImage = "https://firebasestorage.googleapis.com/v0/b/remote-students-community-app.appspot.com/o/DefaultProfilePic.jpg?alt=media&token=cfc326ef-1ceb-401e-8060-6209a5faafd0"
 
 export {
     tDotsI,
@@ -38,5 +38,6 @@ export {
 
     PlusI,
 
-    defaultImg
+    defaultImage
+
 } 

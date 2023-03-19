@@ -1,28 +1,28 @@
 import { ReferI, JobI, EventsI, InviteI } from 'src/assets';
 
-export const nav_features: { id: string, name: string, path: string, icon: string | any }[] = [
+export const nav_features: { id: string, name: string, path: string, icon: string | unknown }[] = [
     {
         id: "xqw139",
         name: "Get Referred",
-        path: '/get-referred',
+        path: '/GetReferred',
         icon: ReferI
     },
     {
         id: "xqw12ed339",
         name: "Job Boards",
-        path: "/job-boards",
+        path: "/JobBoards",
         icon: JobI
     },
     {
         id: "x234dqw139",
         name: "Events",
-        path: "/events",
+        path: "/Events",
         icon: EventsI
     },
     {
         id: "x389h13d",
         name: "Invite Friends",
-        path: '/invite-friends',
+        path: '/InviteFriends',
         icon: InviteI
     },
 ]
