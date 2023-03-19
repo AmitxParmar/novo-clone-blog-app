@@ -1,6 +1,6 @@
 import { ReferI, JobI, EventsI, InviteI } from 'src/assets';
 
-export const nav_features: { id: string, name: string, path: string, icon: string | unknown }[] = [
+export const nav_features: { id: string, name: string, path: string, icon: string }[] = [
     {
         id: "xqw139",
         name: "Get Referred",
