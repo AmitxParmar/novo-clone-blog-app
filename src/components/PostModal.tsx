@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, type FC } from 'react'
-
+import MyEditor from "./Editor"
 type PostModal = {
     isOpen: boolean;
     openModal: () => void;
@@ -11,7 +11,6 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, openModal }) => {
 
     return (
         <Fragment>
-
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={closeModal}>
                     <Transition.Child
@@ -54,7 +53,6 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, openModal }) => {
                                     <div className='border border-solid border-secondary  rounded-lg'>
                                         {/* Text Formatters */}
                                         <div className='top-0 rounded-xl bg-light border-x-white border-x-8 border-t-white py-0 px-[1px] flex items-center pointer-auto'>
-
                                         </div>
                                         {/* Text Content Body */}
                                         <div></div>
@@ -62,13 +60,15 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, openModal }) => {
                                     {/* Divider */}
                                     <div></div>
 
+                                    <MyEditor />
+
                                     <div className="mt-4">
                                         <button
                                             type="button"
-                                            className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                            className="p-0 border-none lg:h-10 rounded-xl text-info inline-flex items-center justify-center scale-100 transition-all transition-delay-1"
                                             onClick={closeModal}
                                         >
-                                            Close!
+                                            Cancel
                                         </button>
                                     </div>
                                 </Dialog.Panel>

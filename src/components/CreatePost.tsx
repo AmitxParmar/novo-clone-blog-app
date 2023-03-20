@@ -10,7 +10,7 @@ const CreatePost: React.FC = () => {
     const openModal = () => setIsOpen(true)
 
     return (
-        <div className='mb-4 mt-56'>
+        <div className='mb-4'>
             <PostModal isOpen={isOpen} closeModal={closeModal} openModal={openModal} />
             <div className='relative flex flex-col min-w-0 break-words bg-white border-0 border-solid border-[#e0e0e0] rounded-xl shadow-[0_2px_8px_rgb(0_0_0/12%)] mb-2.5'>{/* background-clip: border-box */}
                 <div className='xl:p-8 flex-[1_1_auto] min-h-[1px] p-4 break-words'>

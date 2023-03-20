@@ -1,4 +1,5 @@
 import { ReferI, JobI, EventsI, InviteI } from 'src/assets';
+import { NovoI, NotiI, MsgI, BookI, defaultImage, SideOpenI } from 'src/assets'
 
 export const nav_features: { id: string, name: string, path: string, icon: string }[] = [
     {
@@ -25,4 +26,8 @@ export const nav_features: { id: string, name: string, path: string, icon: strin
         path: '/InviteFriends',
         icon: InviteI
     },
+]
+
+const header_icons = [
+    
 ]

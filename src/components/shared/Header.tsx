@@ -13,9 +13,9 @@ const Header: React.FC = () => {
         <React.Fragment>
             <div>
                 {/* NAV_SPACER */}
-                <div className='max-h-14'></div>
+                <div className='max-h-14 sm:hidden md:hidden'></div>
                 {/* NAV/HEADER */}
-                <nav className='z-[1040] max-h-14 flex-start fixed flex flex-row flex-nowrap lg:h-14 bg-[linear-gradient(280.39deg,_#071530_64.59%,#405a86_109.59%)] shadow-[0_2px_8px_rgba(0,0,0,.12)]  right-0 left-0 top-0  justify-start items-center py-1 px-2'> {/* Flex-flow: row nowrap */}
+                <nav className='z-[1040] max-h-14 flex-start fixed flex flex-nowrap lg:h-14 bg-[linear-gradient(280.39deg,_#071530_64.59%,#405a86_109.59%)] shadow-[0_2px_8px_rgba(0,0,0,.12)]  right-0 left-0 top-0  justify-start items-center py-1 px-2'> {/* Flex-flow: row nowrap */}
                     <div className='w-full m-auto py-0 pr-10 pl-20 grow'>
 
                         {/* ASIDE LOGO */}
@@ -28,22 +28,22 @@ const Header: React.FC = () => {
                         {/* HEADER ITEMS */}
                         <div className='flex flex-wrap justify-between  -mx-4 items-center'>
                             {/* NOVO LOGO */}
-                            <div className='static flex max-w-1/4  xl:flex-1/4 '>
+                            <div className='static flex xl:flex-1/4 '>
                                 <Link href="/" aria-label="home page" className="m-0 text-white inline-block py-[.1925rem] text-xl whitespace-nowrap">
                                     <Image src={NovoI} alt='Join Novo Logo' />
                                 </Link>
                             </div>
 
                             {/* Divider */}
-                            <div className='relative block w-full px-4 lg:block lg:flex-[0_0_33.33%] lg:max-w-[33.33%] xl:flex-1/2 xl:max-w-1/2 '></div>
+                            <div className='relative block w-full px-4 lg:block lg:flex-[0_0_33.33%] lg:max-w-[33.33%] xl:flex-1/2 xl:max-w-1/2'></div>
 
                             {/* CTA */}
-                            <div className="relative lg:flex-[0_0_33.33333333%] xl:flex-1/4  max-w-1/4 w-full px-4">
+                            <div className="relative lg:flex-[0_0_33.33333333%] xl:flex-1/4 w-full flex-shrink-0 justify-end">
                                 <div className="flex  pl-0 mb-0 list-none flex-row items-center justify-end">
                                     {/* Messages Icon */}
 
                                     {/* {sessionData ? ( */}
-                                    <div className="md:ml-4 ml-2">
+                                    <div className="">
                                         <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full'
                                             href="/messages"
                                         >
@@ -74,22 +74,21 @@ const Header: React.FC = () => {
                                     </div>
                                     {/* Profile */}
                                     <div className="md:ml-4 ml-2">
-                                        <Link className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full bg-white object-cover'
+                                        <Link
+                                            className='relative color-[#212121] transition-[.3s] flex items-center justify-center w-8 h-8 p-0 rounded-full bg-white object-cover'
                                             href="/"
                                         >
                                             <span className='inline-flex items-center justify-center align-middle '>
-                                                <Image className='rounded-full bg-white' src={defaultImage}
+                                                <Image
+                                                    className='rounded-full bg-white'
+                                                    src={defaultImage}
                                                     alt='Messages'
                                                     height={32}
-                                                    width={32} />
+                                                    width={32}
+                                                />
                                             </span>
                                         </Link>
                                     </div>
-                                    {/* TODO:  ) : (
-                                    <button className='bg-blue-500/2 text-white rounded-sm p-2 opacity-50' onClick={() => signIn()}>
-                                        Login
-                                    </button>
-                                )} */}
                                 </div>
                             </div>
                         </div>
