@@ -1,6 +1,10 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  props : {
+    name: string
+  }
+}
 
 const Editor = (props: Props) => {
   return (

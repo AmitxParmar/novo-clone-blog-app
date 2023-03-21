@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   /* const { data: sessionData } = useSession(); */
   
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
-  console.log(hello);
+  console.log(hello.status);
 
   return (
     <>
