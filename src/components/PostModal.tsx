@@ -1,13 +1,14 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, type FC } from 'react'
+import { Fragment,useState, type FC } from 'react'
 import MyEditor from "./Editor"
+
 type PostModal = {
     isOpen: boolean;
     openModal: () => void;
     closeModal: () => void;
 }
 
-const PostModal: FC<PostModal> = ({ isOpen, closeModal, openModal }) => {
+const PostModal: FC<PostModal> = ({ isOpen, closeModal }) => {
 
     return (
         <Fragment>
@@ -47,7 +48,7 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, openModal }) => {
                                     <div className="my-6">
                                         <input
                                             placeholder='Add a title'
-                                            className='placeholder:text-secondary placeholder:opacity-100 lg:h-10 resize-none block w-full h-8 py-[.5714rem] px-[.8571rem] text-base text-secondary bg-white bg-clip-padding border border-solid rounded-lg transition ease-in-out focus:outline-none focus:border-dark border-secondary overflow-visible pointer-events-auto' />
+                                            className='placeholder:text-secondary placeholder:opacity-100 lg:h-10 resize-none block w-full h-8 py-[.5714rem] px-[.8571rem] text-base text-secondary bg-white bg-clip-padding border border-solid rounded-lg transition ease-in-out focus:outline-none focus:border-dark border-secondary overflow-visible pointer-events-auto items-center justify-center' />
                                     </div>
                                     {/* Post Body */}
                                     <div className='border border-solid border-secondary  rounded-lg'>
@@ -58,10 +59,8 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, openModal }) => {
                                         <div></div>
                                     </div>
                                     {/* Divider */}
-                                    <div></div>
-
+                                    <div className=''></div>
                                     <MyEditor />
-
                                     <div className="mt-4">
                                         <button
                                             type="button"

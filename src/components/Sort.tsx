@@ -22,7 +22,7 @@ const Sort = () => {
             </div>
             <div className='flex ml-auto'>
                 <button className='p-0 border-none bg-transparent m-0 overflow-visible'>
-                    <Image src={EyeI} alt="hide anonymous content" />
+                    <Image src={EyeI} width={32} height={32} alt="hide anonymous content" />
                 </button>
             </div>
         </div>

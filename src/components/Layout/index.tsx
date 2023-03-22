@@ -9,7 +9,7 @@ type ILayout = {
 const Layout: FC<ILayout> = ({ children }) => {
     return (
         <React.Fragment>
-            <div>
+            <div className='m-0 p-0'>
                 <Header />
                 <Sidebar />
                 <div className='pl-16 bg-light'>

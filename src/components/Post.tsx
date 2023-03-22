@@ -7,7 +7,7 @@ const Post: React.FC = () => {
             <div>
                 <div className='w-full'>
                     <div className=''>
-                        Post
+                        <div className=''></div>
                     </div>
                 </div>
             </div>

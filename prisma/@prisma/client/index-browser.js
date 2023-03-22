@@ -89,13 +89,37 @@ Prisma.NullTypes = {
 // https://github.com/microsoft/TypeScript/issues/3192#issuecomment-261720275
 function makeEnum(x) { return x; }
 
+exports.Prisma.AccountScalarFieldEnum = makeEnum({
+  id: 'id',
+  userId: 'userId',
+  type: 'type',
+  provider: 'provider',
+  providerAccountId: 'providerAccountId',
+  refresh_token: 'refresh_token',
+  access_token: 'access_token',
+  expires_at: 'expires_at',
+  token_type: 'token_type',
+  scope: 'scope',
+  id_token: 'id_token',
+  session_state: 'session_state'
+});
+
+exports.Prisma.CategoryScalarFieldEnum = makeEnum({
+  id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  title: 'title',
+  userId: 'userId'
+});
+
 exports.Prisma.PostScalarFieldEnum = makeEnum({
   id: 'id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
   title: 'title',
   content: 'content',
-  authorId: 'authorId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  categoryId: 'categoryId',
+  userId: 'userId'
 });
 
 exports.Prisma.QueryMode = makeEnum({
@@ -103,22 +127,47 @@ exports.Prisma.QueryMode = makeEnum({
   insensitive: 'insensitive'
 });
 
+exports.Prisma.SessionScalarFieldEnum = makeEnum({
+  id: 'id',
+  sessionToken: 'sessionToken',
+  userId: 'userId',
+  expires: 'expires'
+});
+
 exports.Prisma.SortOrder = makeEnum({
   asc: 'asc',
   desc: 'desc'
+});
+
+exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
+  ReadUncommitted: 'ReadUncommitted',
+  ReadCommitted: 'ReadCommitted',
+  RepeatableRead: 'RepeatableRead',
+  Serializable: 'Serializable'
 });
 
 exports.Prisma.UserScalarFieldEnum = makeEnum({
   id: 'id',
   name: 'name',
   email: 'email',
-  googleId: 'googleId'
+  emailVerified: 'emailVerified',
+  image: 'image'
+});
+
+exports.Prisma.VerificationTokenScalarFieldEnum = makeEnum({
+  identifier: 'identifier',
+  token: 'token',
+  expires: 'expires'
 });
 
 
 exports.Prisma.ModelName = makeEnum({
+  Post: 'Post',
+  Account: 'Account',
+  Session: 'Session',
   User: 'User',
-  Post: 'Post'
+  Category: 'Category',
+  VerificationToken: 'VerificationToken'
 });
 
 /**

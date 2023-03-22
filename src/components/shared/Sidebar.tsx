@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { nav_features } from './../../constants';
 /* import { useSession } from 'next-auth/react'; */
 
-import { SideOpenI, HomeI } from 'src/assets';
+import { SideOpenI } from 'src/assets';
 
 const Sidebar: React.FC = () => {
     const router = useRouter();
@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
     /* const updateActive = (val: string) => setActive(val); */
     console.log(active, router.asPath, "active")
     return (
-        <aside className="lg:block hover:w-20% overflow-hidden hover:pr-4 hover:absolute hover:w-fit contents text-black fixed top-0 left-0 w-16 h-screen p-0 bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)] z-[1038]">
+        <aside role="navigation" className="lg:block group-hover:block overflow-y-auto overflow-hidden contents text-black fixed top-0 left-0 w-16 h-screen p-0 bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)] z-[1038]">
             <button className="lg:h-14 lg:w-15 flex items-center justify-center shrink-0 p-3 text-xl transform-none m-0 leading-none">
                 <span className="inline-flex items-center justify-center text-xl">
                     <Image src={SideOpenI} alt="navbar" />
@@ -30,35 +30,24 @@ const Sidebar: React.FC = () => {
                 <div className="pb-20">
                     {/* NAV ICONS */}
                     <div className="flex overflow-hidden hover:overflow-visible flex-col mx-3 md:mt-8 pl-0 mb-0 list-none">
-                        {/* HOME BUTTON */}
-                        <div className="mb-4" title='Home'>
-                            <Link href="/"
-                                onClick={() => setActive("/")}
-                                className={
-                                    `${router.asPath === "/" ? "bg-light " : ""}text-gray-dark flex items-center whitespace-nowrap  hover:bg-light w-10 h-10 px-2 relative transition rounded-full p-1.5`}>
-                                <span className="inline-flex items-center justify-center w-6 h-6 leading-none whitespace-nowrap">
-                                    <Image src={HomeI} alt="home icon" />
-                                </span>
-                                <p className={`hidden hover:block text-sm`}>Home</p>
-                            </Link>
-                        </div>
                         {/* SIDEBAR FEATURES BUTTONS */}
                         <div>
                             {nav_features.map((feature) => (
-                                <div key={feature.id} title={feature.name} className="mb-4">
+                                <div key={feature.id} title={feature.title} className="mb-4 rounded-full object-cover">
                                     <Link
                                         href={feature.path}
                                         className={`${active === feature.path ? ' bg-light ' : ""} 
                                         text-gray-dark hover:bg-light flex items-center whitespace-nowrap w-10 h-10 px-2 relative transition rounded-full p-1.5`}
                                         onClick={() => setActive(feature.path)}>
                                         <div className='w-full pr-4'>
-                                        <span className="inline-flex            items-center justify-center w-6 h-6 leading-none whitespace-nowrap">
-                                            <Image
-                                                src={feature.icon}
-                                                alt={feature.name}
-                                            />
-                                        </span>
-                                            <span className='hidden hover:block hover:visible text-black'>{feature.name}</span>
+                                            <span className="inline-flex            items-center justify-center w-6 h-6 leading-none whitespace-nowrap">
+                                                <Image src={feature.icon} alt={feature.title} />
+                                            </span>
+                                            <span className='hidden hover:block hover:visible text-black'>
+                                                <span className=''>
+                                                    {feature.title}
+                                                </span>
+                                            </span>
                                         </div>
                                     </Link>
                                 </div>
