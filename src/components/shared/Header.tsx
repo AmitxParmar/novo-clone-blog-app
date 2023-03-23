@@ -3,14 +3,12 @@ import React from 'react'
 import { NovoI, SideOpenI } from 'src/assets'
 import Image from 'next/image'
 import Link from 'next/link';
-/* import { signIn, useSession } from 'next-auth/react'; */
 import { header_icons } from '../../constants';
 import { signIn, useSession } from 'next-auth/react';
 
 
 const Header: React.FC = () => {
     const { data: sessionData } = useSession();
-    console.log(sessionData);
 
     return (
         <React.Fragment>

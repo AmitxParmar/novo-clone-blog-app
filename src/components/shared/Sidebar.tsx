@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
     /* const updateActive = (val: string) => setActive(val); */
     console.log(active, router.asPath, "active")
     return (
-        <aside role="navigation" className="lg:block group-hover:block overflow-y-auto overflow-hidden contents text-black fixed top-0 left-0 w-16 h-screen p-0 bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)] z-[1038]">
+        <aside role="navigation" className="lg:block z-[1038] hover:z-[1050] hover:w-64 hover:absolute group-hover:block overflow-y-auto overflow-hidden contents text-black fixed top-0 left-0 w-16 h-screen p-0 bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)]">
             <button className="lg:h-14 lg:w-15 flex items-center justify-center shrink-0 p-3 text-xl transform-none m-0 leading-none">
                 <span className="inline-flex items-center justify-center text-xl">
                     <Image src={SideOpenI} alt="navbar" />
@@ -39,11 +39,11 @@ const Sidebar: React.FC = () => {
                                         className={`${active === feature.path ? ' bg-light ' : ""} 
                                         text-gray-dark hover:bg-light flex items-center whitespace-nowrap w-10 h-10 px-2 relative transition rounded-full p-1.5`}
                                         onClick={() => setActive(feature.path)}>
-                                        <div className='w-full pr-4'>
-                                            <span className="inline-flex            items-center justify-center w-6 h-6 leading-none whitespace-nowrap">
+                                        <div className='w-full pr-4 overflow-hidden'>
+                                            <span className="inline-flex items-center mr-5 justify-center w-6 h-6 leading-none whitespace-nowrap">
                                                 <Image src={feature.icon} alt={feature.title} />
                                             </span>
-                                            <span className='hidden hover:block hover:visible text-black'>
+                                            <span className=''>
                                                 <span className=''>
                                                     {feature.title}
                                                 </span>
@@ -56,7 +56,8 @@ const Sidebar: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <hr className='bg-black h-12 my-4 mx-3 border-t border-solid border-black overflow-visible border-b-gray absolute box-content' />
+           {/* FIXME: complete divider sidebar */} 
+           <hr className='bg-black h-12 my-4 mx-3 border-t border-solid border-black overflow-visible border-b-gray absolute box-content' />
         </aside >
     );
 };
