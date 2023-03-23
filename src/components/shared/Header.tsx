@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 /* import { signIn, useSession } from 'next-auth/react'; */
 import { header_icons } from '../../constants';
-import { SignInResponse, signIn, useSession } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 
 
 const Header: React.FC = () => {
