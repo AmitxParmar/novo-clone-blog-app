@@ -33,7 +33,7 @@ const Header: React.FC = () => {
                             {/* NOVO LOGO */}
                             <div className='static flex xl:flex-1/4 '>
                                 <Link href="/" aria-label="home page" className="m-0 text-white inline-block py-[.1925rem] text-xl whitespace-nowrap">
-                                    <button onClick={(): Promise<SignInResponse > => signIn('google')}>
+                                    <button onClick={() => signIn()}>
                                         <Image src={NovoI} alt='Join Novo Logo' />
                                     </button>
                                 </Link>
