@@ -61,3 +61,48 @@ export const header_icons: { id: string, title: string, path: string, icon: stri
         path: "/profile",
     },
 ]
+
+/* My Communities Emojis */
+type Community = {
+    title: string,
+    path: string,
+    emoji: string;
+}
+
+export const communities: Community[] = [
+    {
+        title: "Startup Hub",
+        path: "/startup-hub",
+        emoji: "🚀"
+    },
+    {
+        title: "Community Builders",
+        path: "/community-builders",
+        emoji: "🌳"
+    },
+    {
+        title: "Crypto & Blockchain",
+        path: "/crypto-and-blockchain",
+        emoji: "💱"
+    },
+    {
+        title: "HR & Recruiting",
+        path: "/hr-recruiting",
+        emoji: "🤝"
+    },
+    {
+        title: "Creator Space",
+        path: "/creator-space",
+        emoji: "🦋"
+    },
+    {
+        title: "Marketing & Sales",
+        path: "/marketing-and-sales",
+        emoji: "📈"
+    },
+    {
+        title: "Design",
+        path: "/design",
+        emoji: "🎨"
+    },
+]
