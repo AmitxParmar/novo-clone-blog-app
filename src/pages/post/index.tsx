@@ -6,8 +6,8 @@ const Post = () => {
     console.log(pid, "id post");
 console.log("Post rendered!!")
     return (
-        <div className='text-black bg-green font-bold mt-18 ml-12'>
-            Tessetsefnascowndc
+        <div>
+            closing tag hai toh sahi
         </div>
     )
 }
