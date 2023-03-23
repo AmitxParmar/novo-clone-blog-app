@@ -23,7 +23,7 @@ export default function MyEditor() {
         onEditorStateChange={setEditorState}
         wrapperClassName="wrapper-class"
         editorClassName="editor-class"
-        toolbarClassName="toolbar-class"
+        toolbarClassName="bg-black"
       />
    {/*    <textarea
         disabled
