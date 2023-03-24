@@ -14,7 +14,7 @@ const TrendingPost = () => {
                         </p>
                         <div>{/* TODO: REMOVE PADDING IF NECESSARY */}
                             <Link href="/post/:id" className='text-black leading-normal text-left font-normal whitespace-nowrap overflow-ellipsis bg-transparent block'>
-                                <div className='bg-white hover:bg-light shadow-[0_2px_8px_rgb(0_0_0/12%)] leading-10 rounded-xl p-5 mt-3 mr-0 mb-5 ml-4 text-black'>
+                                <div className='bg-white hover:hover:bg-primary/10 shadow-[0_2px_8px_rgb(0_0_0/12%)] leading-10 rounded-xl p-5 mt-3 mr-0 mb-5 ml-4 text-black'>
                                     <div className='text-sm text-black'>
                                         {/* Community  */}
                                         <div className='text-xs font-bold'>

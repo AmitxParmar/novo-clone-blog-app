@@ -55,6 +55,26 @@ const Sidebar: React.FC = () => {
                     {/* FIXME: complete divider sidebar */}
                     <hr className='bg-black my-4 mx-3 border-t-[#e0e0e0] border-[0] h-0 border-solid border-black overflow-visible block  border-b-gray absolute box-content' />
                     {/* Communities buttons */}
+                    <div title="Add community" className={`mb-4 w-full hover:bg-light rounded-full items-center justify-center `}>
+                        <button
+                            className={`text-gray-dark w-full flex rounded-full justify-center items-center whitespace-nowrap max-w-10 h-10 px-2 transition `}
+                        >
+                            <div className='w-full pr-4 justify-center items-center overflow-hidden'>
+                                <span className="inline-flex items-center mr-5 justify-center w-6 h-6 leading-none whitespace-nowrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+                                        <path fill="#9e9e9e" d="M21 13.125h-6.125V7h-1.75v6.125H7v1.75h6.125V21h1.75v-6.125H21v-1.75z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Add Communities
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+
+
+
                     {communities.map(({ id, title, path, emoji }) => (
                         <div key={id} title={title} className="mb-4 w-full hover:bg-light rounded-full items-center justify-center">
                             <Link
