@@ -8,8 +8,6 @@ import Feed from 'src/components/Feed'
 const Home: NextPage = () => {
   /* const { data: sessionData } = useSession(); */
   
-  const hello = api.post.getAll.useQuery({ categoryId: "design"});
-  console.log(hello,"Post Data from test");
 
   return (
     <>

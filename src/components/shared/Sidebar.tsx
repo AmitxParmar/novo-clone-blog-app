@@ -20,7 +20,7 @@ const Sidebar: React.FC = () => {
     /* const updateActive = (val: string) => setActive(val); */
     console.log(active, router.asPath, "active")
     return (
-        <aside role="navigation" className={`${sidebarOpen ? "hover:z-[1050] hover:w-64 " : ""} justify-items-center scrollbar-none lg:block z-[1038] hover:z-[1050] hover:w-64 overflow-y-auto overflow-hidden contents text-black fixed top-0 left-0 w-16 h-screen p-0 bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)] `}>
+        <aside role="navigation" className={`${sidebarOpen ? "hover:z-[1050] hover:w-64 " : ""} justify-items-center scrollbar-none hidden xl:block z-[1038] hover:z-[1050] hover:w-64 overflow-y-auto overflow-hidden  text-black fixed top-0 left-0 w-16 h-screen p-0 bg-white after:bg-black after:w-full after:h-screen after:z-[-1] after:content-[""] after:fixed after:right-0 shadow-[0_2px_8px_rgb(0_0_0/12%)] `}>
             <button onClick={() => setSidebarOpen(!sidebarOpen)} className="justify-items-center lg:h-14 fill-blue lg:w-15 flex ml-2 items-center justify-center shrink-0 p-3 text-xl transform-none m-0 leading-none">
                 <span className="inline-flex items-center justify-items-center text-xl">
                     <Image src={SideOpenI} alt="navbar" />

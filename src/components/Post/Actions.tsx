@@ -1,11 +1,11 @@
 import React from 'react'
 
-type Props = {}
+const Actions = () => {
+    return (
+        <div>
 
-const Actions = (props: Props) => {
-  return (
-    <div>Actions</div>
-  )
+        </div>
+    )
 }
 
 export default Actions;

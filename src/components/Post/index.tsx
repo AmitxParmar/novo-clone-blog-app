@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import Header from './Header';
+import { defaultImage } from '~/assets';
 
 const Post: React.FC = () => {
     return (
@@ -8,12 +9,12 @@ const Post: React.FC = () => {
             <div className='w-full'>
                 <div className='h-auto ease-in-out transition-none transition-'>
                     {/* Card */}
-                    <div className='relative flex flex-col min-w-0 break-words bg-white bg-clip-border border-[#e0e0e0] border-solid rounded-xl border-0 mb-2 text-sm '>
+                    <div className='relative flex flex-col min-w-0 break-words hover:bg-light bg-white bg-clip-border border-[#e0e0e0] border-solid rounded-xl border-0 mb-2 text-sm '>
                         {/* Card Body */}
                         <div className='py-6 xl:p-8 min-h-[1px] flex-[1_1_auto] break-words '>
                             <Link href="/post/:id"></Link>
                             {/* Post Heading */}
-                            <Header />
+                            <Header community="🌱 ESG & Sustainability" profilePic={defaultImage } userName='Amit Parmar' />
                             <Link href="/post/:id" className='z-[6] relative '>
                                 <h4 className="text-gray-dark leading-normal font-semibold text-base mb-2 block my-8 mx-0 ">🗞 Top TechCrunch articles of the week!</h4>
                             </Link>

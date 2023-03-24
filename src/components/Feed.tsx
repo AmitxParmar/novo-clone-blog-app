@@ -1,5 +1,5 @@
 import React from 'react'
-import CreatePost from 'src/components/CreatePost';
+import CreatePost from '~/components/CreatePost';
 import Tabs from './Tabs';
 import Posts from './Posts';
 import Sort from './Sort';
@@ -20,7 +20,8 @@ const Feed = () => {
             </div>
             {/* Right Side */}
             <TrendingPost />
-            <div></div> {/* Right Side Space */}
+            {/* Right Side Space */}
+            <div className=''></div> 
         </div>
     )
 }

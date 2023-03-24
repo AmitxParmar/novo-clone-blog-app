@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import PostModal from './PostModal'
+import PostModal from './Modals/CreatePost'
 import { defaultImage } from '~/assets'
 
 const CreatePost: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [title, setTitle] = useState<string>("");
+    const [content, setContent] = useState("");
+    const [categoryId, setCategoryId] = useState("");
 
-    const closeModal = () => setIsOpen(false)
+    const closeModal = () => {
+        /* Logic to post request data */
+        setIsOpen(false)
+    } // also handle post submit logic here.
     const openModal = () => setIsOpen(true)
 
     return (
-        <div className='mb-4 antialiased'>
-            <PostModal isOpen={isOpen} closeModal={closeModal} openModal={openModal} />
+        <div className='mb-4 antialiased text-gray-dark font-normal'>
+            <PostModal setIsOpen={setIsOpen} isOpen={isOpen} closeModal={closeModal} openModal={openModal} />
             <div className='relative flex flex-col min-w-0 break-words bg-white border-0 border-solid border-[#e0e0e0] rounded-xl shadow-[0_2px_8px_rgb(0_0_0/12%)] mb-2.5'>
                 {/* background-clip: border-box */}
                 <div className='xl:p-8 flex-[1_1_auto] min-h-[1px] p-4 break-words'>

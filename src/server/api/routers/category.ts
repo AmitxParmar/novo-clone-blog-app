@@ -12,13 +12,14 @@ export const categoryRouter = createTRPCRouter({
     }),
 
     create: protectedProcedure
-        .input(z.object({ title: z.string() }))
+        .input(z.object({ title: z.string(), emoji: z.string() }))
         .mutation(({ ctx, input }) => {
             return ctx.prisma.category.create({
                 data: {
+                    emoji: input.emoji,
                     title: input.title,
                     userId: ctx.session.user.id,
                 },
-            });
+            });w
         }),
 });

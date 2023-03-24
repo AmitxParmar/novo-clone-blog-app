@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const TrendingPost = () => {
     return (
-        <div className='relative leading-6 antialiased w-full px-4 lg:block lg:max-w-[33.33%] lg:flex-[0_0_33.33333333%] xl:flex-1/4 xl:max-w-1/4'>
+        <div className='relative sm:hidden md:hidden leading-6 antialiased w-full px-4 lg:block lg:max-w-[33.33%] lg:flex-[0_0_33.33333333%] xl:flex-1/4 xl:max-w-1/4'>
             <div className='inline'>
                 <div className=''>
                     <div className='sticky top-[-600px]'>
@@ -24,8 +24,8 @@ const TrendingPost = () => {
                                         </div>
                                         {/* Title */}
                                         {/* TODO: add line clamp here */}
-                                        <div className='text-xs font-normal text-left my-2 mx-0 flex leading-normal overflow-hidden break-words text-black'>
-                                            Are you a student or a teacher? Host a UN Youth Climate Dialogue with your class 📚
+                                        <div className='text-xs font-normal text-left my-2 mx-0 flex leading-normal line-clamp-3 text-green'>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate in inventore suscipit ratione deleniti ipsam odit esse rem, dolore est voluptates consectetur accusamus atque molestiae tempora corrupti totam perspiciatisLorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate in inventore suscipit ratione deleniti ipsam odit esse rem, dolore est voluptates consectetur accusamus atque molestiae tempora corrupti totam perspiciatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate in inventore suscipit ratione deleniti ipsam odit esse rem, dolore est voluptates consectetur accusamus atque molestiae tempora corrupti totam perspiciatis.
                                         </div>
                                         {/* Meta */}
                                         <div className='text-xs text-black'>
