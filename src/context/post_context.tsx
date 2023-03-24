@@ -1,35 +1,41 @@
-import { useContext, createContext, useReducer, useEffect } from 'react'
-import { type Post, post_reducer } from '~/reducers/post_reducer';
+import { useContext, createContext, useReducer, useEffect, useState } from 'react'
 
 const PostsContext = createContext(undefined);
 
-const PostsProvider: React.FC = ({ children }) => {
-    const [state, dispatch] = useReducer(post_reducer, { posts: [] });
+interface IPostProvider {
+    children: React.ReactNode
+}
+
+export const PostsProvider: React.FC<IPostProvider> = ({ children }) => {
+    const [posts, setPosts] = useState<[]>([]);
 
     useEffect(() => {
-        const storedPosts = localStorage.getItem('posts');
-        if (storedPosts) {
-            dispatch({ type: 'ADD_POST', payload: JSON.parse(storedPosts) });
-        }
+        localStorage.getItem('posts');
     }, []);
 
-    const createPost = ({...data }) => {
-        
+    type Post = {
+        categoryId: string;
+        title: string;
+        content: string;
+    }
+    const createPost = (post: Post): void => {
+        const existingArray: Post[]= JSON.parse(localStorage.getItem('posts')) || "[]";
+
+        if (post) {
+            existingArray.push(post);
+            localStorage.setItem('posts', JSON.stringify(existingArray));
+        }
+
     };
 
 
     return (
-        <PostsContext.Provider>
+        <PostsContext.Provider value={{ createPost }} >
             {children}
         </PostsContext.Provider>
     );
 };
 
+export const usePosts = () => useContext(PostsContext);
 
-const usePostsDispatch = () => {
-    const context = useContext(PostsDispatchContext);
-    if (context === undefined) {
-        throw new Error('usePostsDispatch must be used within a PostsProvider');
-    }
-    return context;
-};
+

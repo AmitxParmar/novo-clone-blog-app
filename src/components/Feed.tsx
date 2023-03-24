@@ -21,7 +21,7 @@ const Feed = () => {
             {/* Right Side */}
             <TrendingPost />
             {/* Right Side Space */}
-            <div className=''></div> 
+            <div className='block sm:hidden md:hidden'></div> 
         </div>
     )
 }
