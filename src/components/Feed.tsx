@@ -12,9 +12,9 @@ const Feed = () => {
             {/* Left side space */}
             <div className='sm:w-0 sm:p-0 xl:block xl:flex-[0_0_8.33%] xl:max-w-[8.33%] relative w-full px-4 '></div>
             {/* Main Feed */}
-            <div className='px-0 xl:flex-[0_0_58.33%] xl:max-w-[58.33%] lg:max-w-[66.66%] lg:flex-[0_0_66.67%] relative w-full'>
+            <div className='px-0 mt-12 xl:flex-[0_0_58.33%] xl:max-w-[58.33%] lg:max-w-[66.66%] lg:flex-[0_0_66.67%] relative w-full'>
                 <CreatePost />
-                <Tabs />
+                {/* <Tabs /> */}
                 <Sort />
                 <Posts />
             </div>
