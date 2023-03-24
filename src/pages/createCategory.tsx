@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { api } from '~/utils/api'
 
-const createCategory:React.FC = () => {
+const CreateCategory:React.FC = () => {
     
     const [title, setTitle] = useState<string>("");
     const [emoji, setEmoji] = useState<string>("");
@@ -20,4 +20,4 @@ const createCategory:React.FC = () => {
     )
 }
 
-export default createCategory;
+export default CreateCategory;
