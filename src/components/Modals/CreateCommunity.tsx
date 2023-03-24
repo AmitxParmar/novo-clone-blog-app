@@ -1,8 +1,7 @@
 import React from 'react'
 
-type Props = {}
 
-const CreateCommunity = (props: Props) => {
+const CreateCommunity = () => {
   return (
     <div>CreateCommunity</div>
   )
