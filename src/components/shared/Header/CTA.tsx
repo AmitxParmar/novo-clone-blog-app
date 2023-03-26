@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CTA = () => {
   return (
-    <div className="relative w-full flex-shrink-0 justify-end lg:flex-[0_0_33.33333333%] xl:flex-1/4">
+    <div className="relative grid grid-col-3 overflow-hidden w-full flex-shrink-0 justify-end lg:flex-[0_0_33.33333333%] xl:flex-1/4">
       <div className="mb-0 flex list-none flex-row items-center justify-end pl-0">
         {/* Messages Icon */}
         {header_icons.map(({ id, title, icon, path }) => (

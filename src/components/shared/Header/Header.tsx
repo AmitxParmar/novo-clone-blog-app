@@ -13,21 +13,21 @@ const Header: React.FC = () => {
     <React.Fragment>
       <div>
         {/* NAV_SPACER */}
-        <div className="max-h-14 sm:hidden md:hidden"></div>
+        <div className="max-h-14 block sm:hidden md:hidden"></div>
         {/* NAV/HEADER */}
-        <nav className="flex-start fixed right-0 left-0 top-0 z-[1040] flex max-h-14 flex-nowrap  items-center justify-start bg-[linear-gradient(280.39deg,_#071530_64.59%,#405a86_109.59%)] py-1 px-2 shadow-[0_2px_8px_rgba(0,0,0,.12)] lg:h-14">
+        <nav className="lg:h-14 lg:z-[1040] flex-row flex-nowrap justify-start flex fixed right-0 left-0 top-0 items-center py-1 px-2 bg-[linear-gradient(280.39deg,_#071530_64.59%,#405a86_109.59%)] shadow-[0_2px_8px_rgba(0,0,0,.12)] ">
           {/* Flex-flow: row nowrap */}
-          <div className=" m-auto w-full min-w-full grow py-0 sm:max-w-[512px] sm:p-0 md:max-w-[512px] md:p-0 lg:max-w-[512px] xl:pr-10 xl:pl-20">
+          <div className="lg:flex lg:items-center md:max-w-[512px] lg:max-w-[512px] lg:w-full lg:m-auto">
             {/* ASIDE LOGO */}
             <SidebarOpen />
             {/* HEADER ITEMS */}
-            <div className="-mx-4 flex flex-wrap items-center justify-between">
+            <div className="mx-4 flex flex-wrap items-center justify-between">
               {/* NOVO LOGO */}
               <div className="static flex xl:flex-1/4">
                 <Link
                   href="/"
                   aria-label="home page"
-                  className="m-0 inline-block whitespace-nowrap py-[.1925rem] text-xl text-white"
+                  className="m-0 ml-9 inline-block whitespace-nowrap py-[.1925rem] text-xl text-white"
                 >
                   <Image
                     onClick={() => void signIn("google")}

@@ -18,7 +18,7 @@ const config = {
         "xs": "0",
         "sm:": "576px",
         "md": "768px",
-        "lg": "992px",
+        "lg": "991px",
         "xl": "1200px",
       },
       colors: {
