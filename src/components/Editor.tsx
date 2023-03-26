@@ -21,11 +21,11 @@ export default function MyEditor() {
       <Editor
         editorState={editorState}
         onEditorStateChange={setEditorState}
-        wrapperClassName="wrapper-class"
-        editorClassName="editor-class"
+        wrapperClassName="max-w-full max-h-screen"
+        editorClassName="bg-light overflow-y-scroll h-[250px] max-h-screen"
         toolbarClassName=""
       />
-   {/*    <textarea
+      {/*    <textarea
         disabled
         value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
       /> */}

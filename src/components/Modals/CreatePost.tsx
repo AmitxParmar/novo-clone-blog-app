@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, type FC } from "react";
 import MyEditor from "../Editor";
-
+import { communities } from '~/constants';
 /* ***
 *  openModal: string 
 *  isOpen: boolean
@@ -15,13 +15,19 @@ type PostModal = {
     setIsOpen: (Boolean: boolean) => void;
 };
 
-const PostModal: FC<PostModal> = ({ isOpen, closeModal, setIsOpen }) => {
+console.log(communities)
+
+const PostModal: FC<PostModal> = ({ isOpen, closeModal, setIsOpen, }) => {
+    const [title, setTitle] = useState<string>("");
+    const [content, setContent] = useState("");
+    const [categoryId, setCategoryId] = useState("");
+
     const cancelModal = () => setIsOpen(false);
 
     return (
         <Fragment>
             <Transition appear show={isOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={closeModal}>
+                <Dialog as="div" className="relative z-[1060] max-h-[300px] my-12" onClose={closeModal}>
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -55,6 +61,8 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, setIsOpen }) => {
                                     {/* Post Title */}
                                     <div className="my-6">
                                         <input
+                                            onChange={(e) => setTitle(e.target.value)}
+                                            value={title}
                                             placeholder="Add a title"
                                             className="pointer-events-auto block h-8 w-full resize-none items-center justify-center overflow-visible rounded-lg border border-solid border-secondary bg-white bg-clip-padding py-[.5714rem] px-[.8571rem] text-base text-secondary transition ease-in-out placeholder:text-secondary placeholder:opacity-100 focus:border-dark focus:outline-none lg:h-10"
                                         />
@@ -109,7 +117,7 @@ const PostModal: FC<PostModal> = ({ isOpen, closeModal, setIsOpen }) => {
                                             </button>
                                             <button
                                                 type="button"
-                                                className="transition-delay-1 inline-flex scale-100 items-center justify-center rounded-xl border-none p-0 text-info transition-all lg:h-10"
+                                                className=""
                                                 onClick={closeModal}
                                             >
                                                 Post

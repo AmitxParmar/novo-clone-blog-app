@@ -5,10 +5,7 @@ import { defaultImage } from '~/assets'
 
 const CreatePost: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
-    const [title, setTitle] = useState<string>("");
-    const [content, setContent] = useState("");
-    const [categoryId, setCategoryId] = useState("");
-
+    
     const closeModal = () => {
         /* Logic to post request data */
         setIsOpen(false)

@@ -1,12 +1,8 @@
-import React, { type ReactNode, type FC } from 'react'
+import React, { type FC, type PropsWithChildren } from 'react'
 import Sidebar from 'src/components/shared/Sidebar'
 import Header from 'src/components/shared/Header'
 
-type ILayout = {
-    children: ReactNode;
-};
-
-const Layout: FC<ILayout> = ({ children }) => {
+const Layout: FC<PropsWithChildren> = ({ children }) => {
     return (
         <React.Fragment>
             <div className='m-0 p-0'>

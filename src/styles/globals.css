@@ -6,3 +6,37 @@
 
 
 
+hr {
+@apply my-4 box-content h-0 overflow-visible border-solid;
+  border-width: 1px 0px 0px;
+  border-color: rgba(224,224,224,1);
+  border-image: initial;
+}
+button {
+@apply inline-flex flex-shrink-0 items-center justify-center overflow-visible rounded-lg bg-transparent text-center align-middle text-base font-normal normal-case leading-normal text-white open:relative open:h-8 open:cursor-pointer hover:text-white focus:text-white lg:open:h-10;
+
+  font-family: inherit;
+  appearance: button;
+  user-select: none;
+  transition: all 0.15s ease-in-out 0s;
+  border-color: rgba(131,141,228,1);
+  transform: scale(1);
+}
+button:open {
+  
+}
+button:hover {
+  text-decoration: none;
+  background-color: rgba(100,112,221,1);
+  border-color: rgba(89,102,219,1);
+}
+button:focus {
+  background-color: rgba(100,112,221,1);
+  border-color: rgba(89,102,219,1);
+}
+@media (min-width: undefined) {
+  button {
+  
+  }
+  
+}
