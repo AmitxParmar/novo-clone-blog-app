@@ -2,41 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.cdnfonts.com/css/graphik");
+/* @import url("https://fonts.cdnfonts.com/css/graphik"); */
+@font-face {
+  font-family: Graphik;
+  src: url('/fonts/GraphikRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: Graphik, sans-serif;
+}
+body {
+  margin: 0;
+  font-family: Graphik;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212121;
+  text-align: left;
+  background-color: #f4f4f4;
+}
 
 hr {
-@apply my-4 box-content h-0 overflow-visible border-solid;
+@apply my-4 w-5 px-4 box-content h-0 overflow-visible border-solid;
   border-width: 1px 0px 0px;
   border-color: rgba(224,224,224,1);
   border-image: initial;
 }
-button {
-@apply inline-flex flex-shrink-0 items-center justify-center overflow-visible rounded-lg bg-transparent text-center align-middle text-base font-normal normal-case leading-normal text-white open:relative open:h-8 open:cursor-pointer hover:text-white focus:text-white lg:open:h-10;
 
-  font-family: inherit;
-  appearance: button;
-  user-select: none;
-  transition: all 0.15s ease-in-out 0s;
-  border-color: rgba(131,141,228,1);
-  transform: scale(1);
+element.style {
 }
-button:open {
-  
+:focus:not(:focus-visible) {
+    outline: none!important;
 }
-button:hover {
-  text-decoration: none;
-  background-color: rgba(100,112,221,1);
-  border-color: rgba(89,102,219,1);
+.mb-2, .my-2 {
+    margin-bottom: 16px!important;
 }
-button:focus {
-  background-color: rgba(100,112,221,1);
-  border-color: rgba(89,102,219,1);
+*, :after, :before {
+    box-sizing: border-box;
 }
-@media (min-width: undefined) {
-  button {
-  
-  }
-  
+user agent stylesheet
+div {
+    display: block;
 }
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    margin: 0;
+    font-family: Graphik;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212121;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f4f4f4;
+}
+
+div{
+  display: block;
+}
+
+@media (min-width: 992px)
+html {
+    font-size: 16px;
+}
+
+html {
+  font-family: Graphik;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+

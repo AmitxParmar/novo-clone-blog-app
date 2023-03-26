@@ -11,7 +11,7 @@ const Tabs: FC = () => {
         <div className='mb-4 '>
             <div className=''>
                 <div className='block'>
-                    <nav className='content-[""] absolute top-full left-0 w-full h-1 bg-[#e0e0e0] rounded'>
+                    <nav className='content-[""]  top-full left-0 w-full h-1 bg-[#e0e0e0] rounded'>
                         <Tab.Group>
                             <Tab.List>
                                 <Tab>

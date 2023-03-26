@@ -1,6 +1,6 @@
 import React, { type FC, type PropsWithChildren } from 'react'
 import Sidebar from 'src/components/shared/Sidebar'
-import Header from 'src/components/shared/Header'
+import Header from '~/components/shared/Header/Header'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
     return (

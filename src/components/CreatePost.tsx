@@ -13,7 +13,7 @@ const CreatePost: React.FC = () => {
     const openModal = () => setIsOpen(true)
 
     return (
-        <div className='mb-4 antialiased text-gray-dark font-normal'>
+        <div className='mb-4 block font-graphik antialiased text-gray-dark font-normal'>
             <PostModal setIsOpen={setIsOpen} isOpen={isOpen} closeModal={closeModal} openModal={openModal} />
             <div className='relative flex flex-col min-w-0 break-words bg-white border-0 border-solid border-[#e0e0e0] rounded-xl shadow-[0_2px_8px_rgb(0_0_0/12%)] mb-2.5'>
                 {/* background-clip: border-box */}

@@ -3,6 +3,9 @@ const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        "graphik": ["Graphik","sans-serif"]
+      },
       flex: {
         "1/2": "0, 0, 50%",
         "1/4": "0, 0, 25%",
