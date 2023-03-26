@@ -4,10 +4,13 @@ import Image from "next/image";
 import { useSession, signIn } from "next-auth/react";
 import { defaultImage } from "~/assets";
 
-/* 
-@param profilePic - add profilePic here
-@param community - Community name
-*/
+/**
+ * Post Header Component.
+ *
+ * @param {string} profilePic - Takes profile pic url as prop.
+ * @param {string} userName - username as string.
+ * @param {string} community - Communities goes here
+ */
 type PostHeader = {
   profilePic?: string;
   userName: string;
