@@ -1,5 +1,4 @@
 import { ReferI, JobI, EventsI, InviteI, HomeI } from 'src/assets';
-import { NotiI, MsgI, BookI, defaultImage } from 'src/assets'
 
 export const nav_features: { id: string, title: string, path: string, icon: string }[] = [
     {
@@ -34,27 +33,6 @@ export const nav_features: { id: string, title: string, path: string, icon: stri
     },
 ]
 
-export const header_icons: { id: string, title: string, path: string, icon: string }[] = [
-
-    {
-        id: "3d23d",
-        title: "Messages",
-        icon: MsgI,
-        path: "/Messages",
-    },
-    {
-        id: "9cb2437",
-        title: "Bookmark",
-        icon: BookI,
-        path: "/bookmarks",
-    },
-    {
-        id: "c2x3498h",
-        title: "Notifications",
-        icon: NotiI,
-        path: "/Notifications",
-    },
-]
 
 /* My Communities Emojis */
 type Community = {
