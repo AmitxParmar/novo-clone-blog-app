@@ -54,12 +54,6 @@ export const header_icons: { id: string, title: string, path: string, icon: stri
         icon: NotiI,
         path: "/Notifications",
     },
-    {
-        id: "32x23",
-        title: "Profile",
-        icon: defaultImage,
-        path: "/profile",
-    },
 ]
 
 /* My Communities Emojis */

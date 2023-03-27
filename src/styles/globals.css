@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: Graphik, sans-serif;
 }
+
 body {
   margin: 0;
   font-family: Graphik;
@@ -25,59 +26,38 @@ body {
   color: #212121;
   text-align: left;
   background-color: #f4f4f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 hr {
-@apply my-4 w-5 px-4 box-content h-0 overflow-visible border-solid;
+  @apply my-4 w-5 px-4 box-content h-0 overflow-visible border-solid;
   border-width: 1px 0px 0px;
-  border-color: rgba(224,224,224,1);
+  border-color: rgba(224, 224, 224, 1);
   border-image: initial;
 }
 
-element.style {
-}
-:focus:not(:focus-visible) {
-    outline: none!important;
-}
-.mb-2, .my-2 {
-    margin-bottom: 16px!important;
-}
-*, :after, :before {
-    box-sizing: border-box;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-body {
-    margin: 0;
-    font-family: Graphik;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212121;
-    text-align: left;
-    -webkit-font-smoothing: antialiased;
-    background-color: #f4f4f4;
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
 }
 
-div{
+div {
   display: block;
 }
 
-@media (min-width: 992px)
-html {
+@media (min-width: 992px) {
+  html {
     font-size: 16px;
+  }
 }
+
 
 html {
   font-family: Graphik;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
