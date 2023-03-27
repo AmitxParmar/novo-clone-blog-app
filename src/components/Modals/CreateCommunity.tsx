@@ -1,8 +1,8 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
-const CreateCommunity = ({isOpen}) => {
-  let [isOpen, setIsOpen] = useState(true)
+const CreateCommunity = () => {
+  const [isOpen, setIsOpen] = useState(true)
 
   function closeModal() {
     setIsOpen(false)
@@ -82,7 +82,5 @@ const CreateCommunity = ({isOpen}) => {
   )
 }
 
-  )
-}
 
 export default CreateCommunity

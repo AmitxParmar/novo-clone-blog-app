@@ -11,11 +11,10 @@ const Editor = dynamic<EditorProps>(
   { ssr: false }
 );
 
-interface IEditor {
-  setEditor:
-}
-
-const MyEditor:React.FC = ({ setEditorState, editorState }) => {
+const MyEditor = () => {
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
 
   return (
     <>
