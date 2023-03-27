@@ -20,7 +20,7 @@ const CTA = () => {
             >
               <span className="inline-flex items-center justify-center align-middle">
                 <Image
-                  className="rounded-full"
+                  className="object-contain"
                   src={icon}
                   alt="Messages"
                   height={27}
