@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const NovoLogo = () => {
   return (
-    <div className="static flex xl:flex-1/4">
+    <div className="md:flex-1/2 md:max-w-1/2 static flex w-full px-4 xl:max-w-1/4 xl:flex-1/4">
     <Link
       href="/"
       aria-label="home page"
