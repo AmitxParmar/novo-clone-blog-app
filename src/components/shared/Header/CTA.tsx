@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import { defaultImage } from "~/assets";
+import Image from "next/image";
 
 const CTA = () => {
   return (
-    <div className="relative block w-full flex-shrink-0 justify-end overflow-hidden px-4 md:max-w-1/4 md:flex-1/2 lg:max-w-[33.33%] lg:flex-[0_0_33.33%] xl:flex-1/4">
+    <div className="relative block flex-shrink-0 justify-end px-4 sm:max-w-1/2 sm:flex-1/2 md:max-w-1/4 md:flex-1/2 lg:max-w-[33.33%] lg:flex-[0_0_33.33%] xl:flex-1/4">
       <div className="mb-0 flex list-none flex-row items-center justify-end pl-0">
         {/* {header_icons.map(({ id, title, icon, path }) => ( */}
         {/* Messages Icon */}
@@ -76,6 +78,23 @@ const CTA = () => {
                   fill="#9E9E9E"
                 ></path>
               </svg>
+            </span>
+          </Link>
+        </div>
+        {/* Profile */}
+        <div title="Notification" className="ml-2 rounded-full hover:bg-white">
+          <Link
+            href="/"
+            className="relative flex h-8 w-8 items-center justify-center rounded-full bg-transparent object-contain p-0 text-[#212121] transition-[.3s]"
+          >
+            <span className="inline-flex items-center justify-center align-middle">
+              <Image
+              className="rounded-full"
+                src={defaultImage}
+                height={26}
+                width={26}
+                alt={"profile pic"}
+              />
             </span>
           </Link>
         </div>
