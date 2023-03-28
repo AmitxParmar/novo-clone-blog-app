@@ -38,7 +38,7 @@ body {
 }
 
 hr {
-  @apply my-4 box-content h-0 w-5 overflow-visible border-solid px-4;
+  @apply my-4 box-content h-0 w-full overflow-visible border-solid px-4;
   border-width: 1px 0px 0px;
   border-color: rgba(224, 224, 224, 1);
   border-image: initial;
