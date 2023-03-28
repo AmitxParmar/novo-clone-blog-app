@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CTA = () => {
   return (
-    <div className="relative block flex-shrink-0 justify-end px-4 sm:max-w-1/2 scrollbar sm:flex-1/2 md:max-w-1/4 md:flex-1/2 lg:max-w-[33.33%] lg:flex-[0_0_33.33%] xl:flex-1/4">
+    <div className="relative block flex-shrink-0 justify-end px-4 scrollbar sm:max-w-1/2 sm:flex-1/2 md:max-w-1/4 md:flex-1/2 lg:max-w-[33.33%] lg:flex-[0_0_33.33%] xl:flex-1/4">
       <div className="mb-0 flex list-none flex-row items-center justify-end pl-0">
         {/* {header_icons.map(({ id, title, icon, path }) => ( */}
         {/* Messages Icon */}
@@ -24,9 +24,9 @@ const CTA = () => {
             >
               <path
                 fill="#9e9e9e"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M22.504 11.36c0 5.444-4.414 9.858-9.859 9.858a9.818 9.818 0 01-4.371-1.02L2.246 22.5l-.75-.883 2.398-5.713a9.817 9.817 0 01-1.108-4.545c0-5.445 4.414-9.859 9.86-9.859 5.444 0 9.858 4.414 9.858 9.86zm-1.519.008a8.34 8.34 0 01-12.652 7.139l-4.447 1.822 1.8-4.366a8.34 8.34 0 1115.299-4.596z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
               <path
                 fill="#9e9e9e"
@@ -89,7 +89,7 @@ const CTA = () => {
           >
             <span className="inline-flex items-center justify-center align-middle">
               <Image
-              className="rounded-full"
+                className="rounded-full"
                 src={defaultImage}
                 height={26}
                 width={26}

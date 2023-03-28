@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, type FC } from "react";
 import MyEditor from "../Editor";
-import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
+import { EditorState } from "draft-js";
 import { api } from "~/utils/api";
 /* ***
  *  openModal: string
@@ -18,20 +18,22 @@ type PostModal = {
 
 const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
   const [title, setTitle] = useState<string>("");
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState<string>("");
   const [categoryId, setCategoryId] = useState("clfob8zr60001wlbcucb8veky");
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
+
   const createPost = api.post.create.useMutation({});
-  const invalid = content === "" || categoryId === "" || title === "";
+  const invalid = content === "" || title === "";
+
   const cancelAction = () => {
     setIsOpen(false);
     setTitle("");
     setContent("");
     setCategoryId("clfob8zr60001wlbcucb8veky");
   };
-  
+
   const postAction = () => {
     setIsOpen(false);
     createPost.mutate({
@@ -41,9 +43,9 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
     });
   };
 
-  const handleChange =(editorState: string)=>{
+  const handleContent = (editorState: string) => {
     setContent(editorState);
-  }
+  };
 
   return (
     <Fragment>
@@ -102,7 +104,10 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
                   {/* Divider */}
                   <div className=""></div>
 
-      <MyEditor editorState={editorState} setEditorState={setEditorState}  />
+                  <MyEditor
+                    editorState={editorState}
+                    setEditorState={setEditorState}
+                  />
 
                   {/* Modal footer */}
                   <div className="flex-start pointer-events-auto flex flex-wrap items-center rounded-b-xl border-t-0 px-8 pb-8 pt-0">
@@ -125,7 +130,7 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
                               <path
                                 fill="#ffffff"
                                 stroke="#ffffff"
-                                stroke-width="0.33"
+                                strokeWidth="0.33"
                                 d="M5.383 9.117l.117.116.117-.116 7.5-7.5.116-.117-.116-.117-.707-.707-.117-.116-.117.116L5.5 7.352 1.824 3.676l-.117-.116-.117.116-.707.707-.116.117.116.117 4.5 4.5z"
                               ></path>
                             </svg>
@@ -148,7 +153,7 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
                       <button
                         disabled={invalid}
                         type="button"
-                        className=""
+                        className={invalid ? "bg-red" : "bg-black"}
                         onClick={() => postAction()}
                       >
                         Post

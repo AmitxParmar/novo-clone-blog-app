@@ -1,20 +1,19 @@
-import React, { useState } from "react";
-import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
-import { type EditorProps } from "react-draft-wysiwyg";
+import { type EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import draftToHtml from "draftjs-to-html";
 import dynamic from "next/dynamic";
 
+interface IEditor {
+  editorState: EditorState;
+  setEditorState: (editorState: EditorState) => void;
+}
 
-const Editor = dynamic<EditorProps>(
+const Editor = dynamic(
   () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
   { ssr: false }
 );
 
-const MyEditor = () => {
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
+const MyEditor: React.FC<IEditor> = ({ editorState, setEditorState }) => {
+  
 
   return (
     <>
@@ -23,7 +22,7 @@ const MyEditor = () => {
         onEditorStateChange={setEditorState}
         wrapperClassName="max-w-full max-h-screen"
         editorClassName="bg-light overflow-y-scroll h-[440px] w-[440px] max-h-screen"
-        toolbarClassName="w-full"
+        toolbarClassName="w-full grid grid-rows-12"
       />
       {/*    <textarea
         disabled

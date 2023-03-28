@@ -14,7 +14,9 @@ const Profile = () => {
 
   return (
     <div className="ml-12 justify-center items-center mt-12 lg:pl-16">
-      <div className="pl-6">Profile section</div>
+      <div className="pl-6 ">
+
+      </div>
     </div>
   );
 };
