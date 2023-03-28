@@ -13,7 +13,6 @@ const Post: React.FC = () => {
           <div className="relative mb-2 flex min-w-0 flex-col break-words rounded-xl border-0 border-solid border-[#e0e0e0] bg-white bg-clip-border text-sm hover:bg-cyan/10 ">
             {/* Card Body */}
             <div className="min-h-[1px] flex-[1_1_auto] break-words py-6 px-8 ">
-              <Link href="/post/:id"></Link>
               {/* Post Heading */}
               <Header
                 community="🌱 ESG & Sustainability"
