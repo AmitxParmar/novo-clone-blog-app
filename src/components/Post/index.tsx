@@ -8,12 +8,11 @@ const Post: React.FC = () => {
   return (
     <div>
       <div className="w-full">
-        <div className="h-auto transition-none ease-in-out ">
+        <div className="h-auto cursor-pointer transition-none ease-in-out">
           {/* Card */}
           <div className="relative mb-2 flex min-w-0 flex-col break-words rounded-xl border-0 border-solid border-[#e0e0e0] bg-white bg-clip-border text-sm hover:bg-cyan/10 ">
             {/* Card Body */}
-            <div className="min-h-[1px] flex-[1_1_auto] break-words py-6 sm:px-12 sm:py-7 xl:p-8 ">
-              <Link href="/post/:id"></Link>
+            <div className="min-h-[1px] flex-[1_1_auto] break-words py-6 px-8 ">
               {/* Post Heading */}
               <Header
                 community="🌱 ESG & Sustainability"

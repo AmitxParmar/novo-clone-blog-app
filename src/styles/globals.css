@@ -5,8 +5,15 @@
 /* @import url("https://fonts.cdnfonts.com/css/graphik"); */
 @font-face {
   font-family: Graphik;
-  src: url('/fonts/GraphikRegular.otf') format('opentype');
+  src: url("/fonts/GraphikRegular.otf") format("opentype");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url("/public/fonts/GraphikSemibold.otf") format("opentype");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -31,27 +38,51 @@ body {
 }
 
 hr {
-  @apply my-4 w-5 px-4 box-content h-0 overflow-visible border-solid;
+  @apply my-4 box-content h-0 w-5 overflow-visible border-solid px-4;
   border-width: 1px 0px 0px;
   border-color: rgba(224, 224, 224, 1);
   border-image: initial;
 }
 
-
+element.style {
+}
+:focus:not(:focus-visible) {
+  outline: none !important;
+}
+.mb-2,
+.my-2 {
+  margin-bottom: 16px !important;
+}
 *,
 :after,
 :before {
   box-sizing: border-box;
+}
+user agent stylesheet div {
+  display: block;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  font-family: Graphik;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212121;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f4f4f4;
 }
 
 div {
   display: block;
 }
 
-@media (min-width: 992px) {
-  html {
-    font-size: 16px;
-  }
+@media (min-width: 992px) html {
+  font-size: 16px;
 }
 
 
@@ -60,4 +91,17 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+em-emoji-picker {
+  --background-rgb: 255, 255, 255;
+  --border-radius: 6px;
+  --category-icon-size: 24px;
+  --color-border-over: rgba(0, 0, 0, 0.1);
+  --color-border: rgba(0, 0, 0, 0.05);
+  --font-family: "Graphik", sans-serif;
+  --font-size: 12px;
+  --rgb-accent: 255, 105, 180;
+  --rgb-background: 255, 255, 255;
+  --rgb-color: 102, 51, 153;
 }
