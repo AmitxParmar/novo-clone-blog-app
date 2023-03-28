@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const Profile = () => {
   const [profile, setProfile] = useState();
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
   const { id } = router.query;

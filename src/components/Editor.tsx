@@ -14,9 +14,7 @@ const Editor = dynamic(
 
 const MyEditor: React.FC<IEditor> = ({ editorState, setEditorState }) => {
   
-
   return (
-    <>
       <Editor
         editorState={editorState}
         onEditorStateChange={setEditorState}
@@ -24,12 +22,12 @@ const MyEditor: React.FC<IEditor> = ({ editorState, setEditorState }) => {
         editorClassName="bg-light overflow-y-scroll h-[440px] w-[440px] max-h-screen"
         toolbarClassName="w-full grid grid-rows-12"
       />
-      {/*    <textarea
+  );
+};
+
+{/*    <textarea
         disabled
         value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
       /> */}
-    </>
-  );
-};
 
 export default MyEditor;

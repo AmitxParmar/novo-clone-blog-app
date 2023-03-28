@@ -157,7 +157,7 @@ const Features: React.FC<IFeatures> = ({ active, setActive }) => {
           } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
         >
           <Link
-            href="/invitefriends"
+            href="/"
             className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
             onClick={() => setActive("/invites")}
           >

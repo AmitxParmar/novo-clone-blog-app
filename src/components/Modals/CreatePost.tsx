@@ -26,7 +26,7 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
 
   const createPost = api.post.create.useMutation({});
   const invalid = content === "" || title === "";
-
+  console.log(invalid);
   const cancelAction = () => {
     setIsOpen(false);
     setTitle("");

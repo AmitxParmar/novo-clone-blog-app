@@ -43,57 +43,65 @@ const Sidebar: React.FC = () => {
         {/* NAV CONTAINER */}
         <div className="pb-20">
           {/* NAV ICONS */}
+
           <Features setActive={setActive} active={active} />
           {/* FIXME: complete divider sidebar */}
           <hr />
-          {/* Communities buttons */}
-          <div className="nav-item mb-4 block ">
-            <Link
-              href="/"
-              className="nav-link rounded-pill flex items-center whitespace-nowrap w-10 h-10 px-2 relative text-dark rounded-full p-1.5 "
-              aria-label="add communities"
-            >
-              <span className="nav-icon inline-flex items-center justify-center w-6 h-6 leading-none whitespace-nowrap text-dark ">
-                <span className="a-icon inline-flex items-center justify-center align-middle leading-none whitespace-nowrap ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    fill="none"
-                    viewBox="0 0 28 28"
-                  >
-                    <path
-                      fill="#9e9e9e"
-                      d="M21 13.125h-6.125V7h-1.75v6.125H7v1.75h6.125V21h1.75v-6.125H21v-1.75z"
-                    ></path>
-                  </svg>
-                </span>
-              </span>
-              <span className="nav-text hidden overflow-hidden text-ellipsis whitespace-nowrap pl-4 text-dark">
-                <span className="a-typography span">My Communities</span>
-              </span>
-            </Link>
-          </div>
-
-          {categories?.map(({ id, title, emoji }) => (
+          <div className="mx-3 mb-0 flex list-none flex-col overflow-hidden pl-0 md:mt-8">
+            {/* Communities buttons */}
             <div
-              key={id}
-              title={title}
-              className="mb-4 w-full items-center justify-center rounded-full hover:bg-light"
+              title={"invite friends"}
+              className={`${
+                active === router.asPath ? " bg-light " : ""
+              } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
             >
-              <Link
-                href={"/"}
-                className={`max-w-10 flex h-10 w-full items-center whitespace-nowrap px-2 text-gray-dark transition`}
+              <div
+                className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
               >
-                <div className="w-full overflow-hidden pr-4">
-                  <span className="text-md mr-2 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap p-6 leading-none">
-                    {emoji}
+                <div className="w-full items-center justify-center overflow-hidden align-middle">
+                  <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="none"
+                      viewBox="0 0 28 28"
+                    >
+                      <path
+                        fill="#9e9e9e"
+                        d="M21 13.125h-6.125V7h-1.75v6.125H7v1.75h6.125V21h1.75v-6.125H21v-1.75z"
+                      ></path>
+                    </svg>
                   </span>
-                  <span className="">{title}</span>
+                  <span className="h-6 w-6 align-middle leading-none">
+                    Add Communities
+                  </span>
                 </div>
-              </Link>
+              </div>
             </div>
-          ))}
+
+            {categories?.map(({ id, title, emoji }) => (
+              <div
+                key={id}
+                title={title}
+                className="mb-4 w-full items-center justify-center rounded-full hover:bg-light"
+              >
+                <Link
+                  href={`/${title}`}
+                  className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
+                >
+                  <div className="w-full items-center justify-center overflow-hidden align-middle">
+                    <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">
+                      {emoji}
+                    </span>
+                    <span className="h-6 w-6 justify-center items-center leading-none">
+                      {title}
+                    </span>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </aside>
