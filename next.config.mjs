@@ -15,23 +15,26 @@ const config = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'firebasestorage.googleapis.com',
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
       },
       {
-        protocol: 'https',
-        hostname: '**.googleusercontent.**',
+        protocol: "https",
+        hostname: "**.googleusercontent.**",
       },
 
       {
-        protocol: 'https',
-        hostname: '**.googleapis.**',
+        protocol: "https",
+        hostname: "**.googleapis.**",
       },
       {
-        protocol: 'http',
-        port: '3000',
-        hostname: 'localhost',
-        pathname: "/**"
+        protocol: "http",
+        port: "3000",
+        hostname: "localhost",
+        pathname: "/**",
+      },
+      {
+        hostname: "**.joinnova.**",
       },
     ],
   },
