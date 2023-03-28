@@ -25,7 +25,7 @@ const Post: React.FC = () => {
                 </h4>
               </Link>
               {/* FeedPosts_Rte Container */}
-              <div className='relative z-[1] break-words bg-[linear-gradient(180deg,hsla(0,0%,100%,0),#fff)] text-sm leading-normal antialiased before:absolute before:left-0 before:bottom-0 before:z-[2] before:max-h-[30%] before:w-full before:content-[""] lg:block xl:block'>
+              <div className='relative z-[1] text-ellipsis break-words bg-[linear-gradient(180deg,hsla(0,0%,100%,0),#fff)] text-sm leading-normal antialiased before:absolute before:left-0 before:bottom-0 before:z-[2] before:max-h-[30%] before:w-full before:content-[""] lg:block xl:block'>
                 <div className="relative h-full max-h-64 overflow-hidden text-ellipsis break-words text-sm font-normal leading-normal ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Dolore maiores optio magni qui omnis fugit inventore. Vitae
@@ -45,109 +45,7 @@ const Post: React.FC = () => {
                   ex. Labore excepturi distinctio ad sit officia quibusdam
                   deleniti reiciendis maiores fugiat, cumque aliquid alias
                   doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Eos
-                  tempore, esse vel blanditiis excepturi animi illo adipisci
-                  iure distinctio impedit, illum aliquam odio autem similique
-                  accusantium! Dolor itaque perferendis fuga est deleniti sed
-                  cum fugiat iure distinctio unde. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Sequi soluta ipsum voluptates
-                  saepe explicabo enim quo repudiandae illum. Quaerat iure ullam
-                  nesciunt quasi ducimus illum ipsum magnam blanditiis maiores
-                  ex. Labore excepturi distinctio ad sit officia quibusdam
-                  deleniti reiciendis maiores fugiat, cumque aliquid alias
-                  doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Eos
-                  tempore, esse vel blanditiis excepturi animi illo adipisci
-                  iure distinctio impedit, illum aliquam odio autem similique
-                  accusantium! Dolor itaque perferendis fuga est deleniti sed
-                  cum fugiat iure distinctio unde. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Sequi soluta ipsum voluptates
-                  saepe explicabo enim quo repudiandae illum. Quaerat iure ullam
-                  nesciunt quasi ducimus illum ipsum magnam blanditiis maiores
-                  ex. Labore excepturi distinctio ad sit officia quibusdam
-                  deleniti reiciendis maiores fugiat, cumque aliquid alias
-                  doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Eos
-                  tempore, esse vel blanditiis excepturi animi illo adipisci
-                  iure distinctio impedit, illum aliquam odio autem similique
-                  accusantium! Dolor itaque perferendis fuga est deleniti sed
-                  cum fugiat iure distinctio unde. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Sequi soluta ipsum voluptates
-                  saepe explicabo enim quo repudiandae illum. Quaerat iure ullam
-                  nesciunt quasi ducimus illum ipsum magnam blanditiis maiores
-                  ex. Labore excepturi distinctio ad sit officia quibusdam
-                  deleniti reiciendis maiores fugiat, cumque aliquid alias
-                  doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Eos
-                  tempore, esse vel blanditiis excepturi animi illo adipisci
-                  iure distinctio impedit, illum aliquam odio autem similique
-                  accusantium! Dolor itaque perferendis fuga est deleniti sed
-                  cum fugiat iure distinctio unde. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Sequi soluta ipsum voluptates
-                  saepe explicabo enim quo repudiandae illum. Quaerat iure ullam
-                  nesciunt quasi ducimus illum ipsum magnam blanditiis maiores
-                  ex. Labore excepturi distinctio ad sit officia quibusdam
-                  deleniti reiciendis maiores fugiat, cumque aliquid alias
-                  doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Eos
-                  tempore, esse vel blanditiis excepturi animi illo adipisci
-                  iure distinctio impedit, illum aliquam odio autem similique
-                  accusantium! Dolor itaque perferendis fuga est deleniti sed
-                  cum fugiat iure distinctio unde. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Sequi soluta ipsum voluptates
-                  saepe explicabo enim quo repudiandae illum. Quaerat iure ullam
-                  nesciunt quasi ducimus illum ipsum magnam blanditiis maiores
-                  ex. Labore excepturi distinctio ad sit officia quibusdam
-                  deleniti reiciendis maiores fugiat, cumque aliquid alias
-                  doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Eos
-                  tempore, esse vel blanditiis excepturi animi illo adipisci
-                  iure distinctio impedit, illum aliquam odio autem similique
-                  accusantium! Dolor itaque perferendis fuga est deleniti sed
-                  cum fugiat iure distinctio unde. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Sequi soluta ipsum voluptates
-                  saepe explicabo enim quo repudiandae illum. Quaerat iure ullam
-                  nesciunt quasi ducimus illum ipsum magnam blanditiis maiores
-                  ex. Labore excepturi distinctio ad sit officia quibusdam
-                  deleniti reiciendis maiores fugiat, cumque aliquid alias
-                  doloremque doloribus sint eos. Neque quam dicta tenetur hic.
-                  Pariatur velit quibusdam voluptatibus eos amet unde. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit.
-                  Necessitatibus, mollitia iste. Rerum obcaecati fuga rem
-                  repellendus eaque distinctio quidem, commodi eius beatae
-                  soluta nam suscipit sed doloribus minus mollitia nisi! Lorem
-                  ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-                  soluta ipsum voluptates saepe explicabo enim quo repudiandae
-                  illum. Quaerat iure ullam nesciunt quasi ducimus illum ipsum
-                  magnam blanditiis maiores ex. Labore excepturi distinctio ad
-                  sit officia quibusdam deleniti reiciendis maiores fugiat,
-                  cumque aliquid alias doloremque doloribus sint eos. Neque quam
-                  dicta tenetur hic. Pariatur velit quibusdam voluptatibus eos
-                  amet unde.
+                 
                 </div>
               </div>
               <Actions />
