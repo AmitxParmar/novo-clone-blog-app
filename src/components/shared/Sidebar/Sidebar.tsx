@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { api } from "~/utils/api";
-import { SideOpenI } from "src/assets";
 import Features from "./Features";
 
 const Sidebar: React.FC = () => {
@@ -22,23 +21,22 @@ const Sidebar: React.FC = () => {
   return (
     <aside
       role="navigation"
-      className={`${
-        sidebarOpen ? "hover:z-[1050] hover:w-64" : "z-[1038]"
-      } fixed top-0 left-0  hidden h-screen w-16 justify-items-center overflow-hidden overflow-y-auto bg-white p-0 text-black shadow-[0_2px_8px_rgb(0_0_0/12%)] after:fixed after:right-0 after:z-[1037] after:h-screen after:w-full after:bg-black after:content-[""] hover:z-[1050] hover:w-64 xl:block `}
+      className={`${sidebarOpen ? "hover:z-[1050] hover:w-64" : "z-[1038]"
+        } fixed top-0 left-0  hidden h-screen w-16 justify-items-center overflow-hidden overflow-y-auto bg-white p-0 text-black shadow-[0_2px_8px_rgb(0_0_0/12%)] after:fixed after:right-0 after:z-[1037] after:h-screen after:w-full after:bg-black after:content-[""] hover:z-[1050] hover:w-64 xl:block `}
     >
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
         className="lg:w-15 m-0 ml-2 flex shrink-0 transform-none items-center justify-center justify-items-center fill-blue p-3 text-xl leading-none lg:h-14"
       >
         <span className="inline-flex items-center justify-items-center text-xl">
-          <Image src={SideOpenI} alt="navbar" />
+          {/* TODO: add three lines svg */}
         </span>
       </button>
       <div className="relative h-[calc(100vh-56px)] w-full touch-auto overflow-hidden pb-4 text-base font-normal">
         {/* NAV CONTAINER */}
         <div className="pb-20">
           {/* NAV ICONS */}
-          <Features setActive={setActive} active={active} />
+          <Features />
           <hr />
           <div className="mx-3 mb-0 flex list-none flex-col overflow-hidden pl-0 md:mt-8">
             {/* Communities buttons */}
@@ -46,7 +44,6 @@ const Sidebar: React.FC = () => {
               title={"invite friends"}
               className={`mb-4 w-full items-center justify-center rounded-full hover:bg-light`}
             >
-              
               <div
                 className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
               >

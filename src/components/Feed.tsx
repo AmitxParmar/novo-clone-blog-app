@@ -7,7 +7,7 @@ import TrendingPosts from './TrendingPost/TrendingPosts';
 
 const Feed = () => {
     return (
-        <div className='lg:px-4 flex flex-wrap leading-6 -mx-4 w-full'>
+        <div className='lg:px-4 sm:right-0 sm:left-0 flex flex-wrap leading-6 -mx-4 w-full'>
             {/* TODO: might fix that later */}
             {/* Left side space */}
             <div className='sm:w-0 sm:p-0 xl:block xl:flex-[0_0_8.33%] xl:max-w-[8.33%] relative w-full px-4 '></div>
