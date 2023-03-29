@@ -19,16 +19,11 @@ const Sidebar: React.FC = () => {
     enabled: sessionData?.user != undefined,
   });
 
-  useEffect(() => {
-    setActive("/");
-  }, []);
-
-  /* const updateActive = (val: string) => setActive(val); */
   return (
     <aside
       role="navigation"
       className={`${
-        sidebarOpen ? "hover:z-[1050] hover:w-64 " : "z-[1038]"
+        sidebarOpen ? "hover:z-[1050] hover:w-64" : "z-[1038]"
       } fixed top-0 left-0  hidden h-screen w-16 justify-items-center overflow-hidden overflow-y-auto bg-white p-0 text-black shadow-[0_2px_8px_rgb(0_0_0/12%)] after:fixed after:right-0 after:z-[1037] after:h-screen after:w-full after:bg-black after:content-[""] hover:z-[1050] hover:w-64 xl:block `}
     >
       <button
@@ -43,18 +38,15 @@ const Sidebar: React.FC = () => {
         {/* NAV CONTAINER */}
         <div className="pb-20">
           {/* NAV ICONS */}
-
           <Features setActive={setActive} active={active} />
-          {/* FIXME: complete divider sidebar */}
           <hr />
           <div className="mx-3 mb-0 flex list-none flex-col overflow-hidden pl-0 md:mt-8">
             {/* Communities buttons */}
             <div
               title={"invite friends"}
-              className={`${
-                active === router.asPath ? " bg-light " : ""
-              } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
+              className={`mb-4 w-full items-center justify-center rounded-full hover:bg-light`}
             >
+              
               <div
                 className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
               >

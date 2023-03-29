@@ -1,12 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-interface IFeatures {
-  active: string;
-  setActive: (path: string) => void;
-}
 
-const Features: React.FC<IFeatures> = ({ active, setActive }) => {
+const Features: React.FC = () => {
   const router = useRouter();
 
   return (
@@ -17,14 +13,13 @@ const Features: React.FC<IFeatures> = ({ active, setActive }) => {
         <div
           title={"Home"}
           className={`${
-            active === "/" ? " bg-light " : ""
+            router.pathname === "/" ? " bg-light " : ""
           } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
         >
           <Link
             href="/"
             /* href={feature.path} */
             className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
-            onClick={() => setActive("/")}
           >
             <div className="w-full items-center justify-center overflow-hidden align-middle">
               <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">
@@ -45,18 +40,18 @@ const Features: React.FC<IFeatures> = ({ active, setActive }) => {
             </div>
           </Link>
         </div>
+        
         {/* Referrals */}
         <div
-          title={"Home"}
+          title={"Referrals"}
           className={`${
-            active === router.asPath ? " bg-light " : ""
+            router.pathname === "/GetReferred" ? " bg-light " : ""
           } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
         >
           <Link
-            href="/"
+            href="/GetReferred"
             /* href={feature.path} */
             className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
-            onClick={() => setActive("/referrals")}
           >
             <div className="w-full items-center justify-center overflow-hidden align-middle">
               <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">
@@ -84,14 +79,12 @@ const Features: React.FC<IFeatures> = ({ active, setActive }) => {
         <div
           title={"Jobs"}
           className={`${
-            active === router.asPath ? " bg-light " : ""
+            router.pathname === "/Job" ? " bg-light " : ""
           } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
         >
           <Link
-            href="/"
-            /* href={feature.path} */
+            href="/Job"
             className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
-            onClick={() => setActive("/jobs")}
           >
             <div className="w-full items-center justify-center overflow-hidden align-middle">
               <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">
@@ -115,15 +108,14 @@ const Features: React.FC<IFeatures> = ({ active, setActive }) => {
 
         {/* Events */}
         <div
-          title={"Home"}
+          title={"Events"}
           className={`${
-            active === router.asPath ? " bg-light " : ""
+            router.pathname === "/Events" ? " bg-light " : ""
           } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
         >
           <Link
-            href="/events"
+            href="/Events"
             className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
-            onClick={() => setActive("/events")}
           >
             <div className="w-full items-center justify-center overflow-hidden align-middle">
               <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">
@@ -151,15 +143,14 @@ const Features: React.FC<IFeatures> = ({ active, setActive }) => {
 
         {/* invites */}
         <div
-          title={"invite friends"}
+          title={"Invite Friends"}
           className={`${
-            active === router.asPath ? " bg-light " : ""
+            router.pathname === "/InviteFriends" ? " bg-light " : ""
           } mb-4 w-full items-center justify-center rounded-full hover:bg-light `}
         >
           <Link
-            href="/"
+            href="/InviteFriends"
             className={`max-w-10 flex h-10 w-full items-center justify-center whitespace-nowrap rounded-full px-2 text-gray-dark transition `}
-            onClick={() => setActive("/invites")}
           >
             <div className="w-full items-center justify-center overflow-hidden align-middle">
               <span className="mr-5 inline-flex h-6 w-6 items-center justify-center whitespace-nowrap leading-none">

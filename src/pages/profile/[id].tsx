@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import UserProfile from "~/components/profile";
 
 const Profile = () => {
   const [profile, setProfile] = useState();
@@ -13,9 +14,11 @@ const Profile = () => {
   }, [id]);
 
   return (
-    <div className="ml-12 justify-center items-center mt-12 lg:pl-16">
-      <div className="pl-6 ">
-
+    /* Page body */
+    <div className="lg:pl-16">
+      {/* Style wrapper */}
+      <div className="flex w-full justify-center px-6 sm:flex-col sm:items-center md:flex-col lg:items-center xl:flex-row xl:px-6">
+        <UserProfile/>
       </div>
     </div>
   );
