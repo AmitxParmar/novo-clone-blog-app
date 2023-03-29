@@ -1,6 +1,7 @@
 import React from 'react'
 import { EyeI } from '~/assets';
 import Image from 'next/image'
+
 const Sort = () => {
     return (
         <div className='w-full mb-7 flex items-center justify-center'>

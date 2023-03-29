@@ -37,6 +37,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 hr {
   @apply my-4 box-content h-0 w-full overflow-visible border-solid px-4;
   border-width: 1px 0px 0px;
@@ -44,27 +55,32 @@ hr {
   border-image: initial;
 }
 
-element.style {
-}
+element.style {}
+
 :focus:not(:focus-visible) {
   outline: none !important;
 }
+
 .mb-2,
 .my-2 {
   margin-bottom: 16px !important;
 }
+
 *,
 :after,
 :before {
   box-sizing: border-box;
 }
+
 user agent stylesheet div {
   display: block;
 }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   margin: 0;
   font-family: Graphik;

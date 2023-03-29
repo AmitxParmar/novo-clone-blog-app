@@ -29,7 +29,7 @@ const CreatePost: React.FC = () => {
                 height={32}
                 width={32}
                 /* TODO: check and add opacity */
-              />
+                />
             </div>
             {/* TODO: reduce hover opacity */}
             <button
