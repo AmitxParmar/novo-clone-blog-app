@@ -18,18 +18,18 @@ const CreatePost: React.FC = () => {
       <PostModal setIsOpen={setIsOpen} isOpen={isOpen} openModal={openModal} />
       <div className="relative mb-2.5 flex min-w-0 flex-col break-words rounded-xl border-0 border-solid border-[#e0e0e0] bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)]">
         {/* background-clip: border-box */}
-        <div className="min-h-[1px] flex-[1_1_auto] break-words p-4 xl:p-8">
+        <div className="min-h-[1px]  flex-[1_1_auto] break-words p-4 xl:p-8">
           <div className="flex items-center break-words">
             {/* User Profile Icon */}
-            <div>
+            <div className="relative h-8 w-8 rounded-full border-[0px] border-solid border-white bg-white ">
               <Image
                 alt={`User Image`}
-                className="h-8 w-8 rounded-full border-[0px] border-solid border-white bg-white "
                 src={defaultImage}
+                className="rounded-full"
                 height={32}
                 width={32}
                 /* TODO: check and add opacity */
-                />
+              />
             </div>
             {/* TODO: reduce hover opacity */}
             <button
