@@ -1,6 +1,7 @@
-import React from "react";
 import Title from "./Title";
 import Counter from "./Counter";
+import Detail from "./Detail";
+import { PencilI } from "~/assets";
 
 const Info = () => {
   return (
@@ -12,6 +13,9 @@ const Info = () => {
         <Counter counter="comment" count={2} />
         <Counter counter="communities" count={12} />
       </div>
+      <Detail svg={PencilI} title="others" />
+      <Detail svg={PencilI} title="Class of 2022" />
+      <Detail svg={PencilI} title="MBA in Entrepreneurship" />
     </div>
   );
 };
