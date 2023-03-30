@@ -1,29 +1,23 @@
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 
-const CreateCommunity = () => {
-  const [isOpen, setIsOpen] = useState(true)
+interface ICreateCommunity {
+  isOpen: boolean;
+  closeModal: () => void;
+  setIsOpen: (isOpen: boolean) => void;
+  setCategory: (category: string) => void;
+  setEmoji: (emoji: string) => void;
+}
 
-  function closeModal() {
-    setIsOpen(false)
-  }
-
-  function openModal() {
-    setIsOpen(true)
-  }
-
+const CreateCommunity: React.FC<ICreateCommunity> = ({
+  isOpen,
+  closeModal,
+  setIsOpen,
+  setCategory,
+  setEmoji,
+}) => {
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open dialog
-        </button>
-      </div>
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -49,27 +43,44 @@ const CreateCommunity = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="flex w-full max-w-md transform flex-col overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="text-gray-900 text-lg font-bold leading-6 tracking-wide"
                   >
-                    Payment successful
+                    Create Community{" "}
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
+                  <div className="mt-2 flex flex-col">
+                    <label className="inline-flex">Enter Community name</label>
+                    <input
+                      type="text"
+                      placeholder="Enter community name"
+                      className="text-gray-500 inline-flex h-6 w-full rounded-none border border-black p-4 text-sm tracking-wide outline-none placeholder:text-gray"
+                      onChange={(e) => setCategory(e.target.value)}
+                    />
+                    <label className="mt-3 inline-flex">Emoji</label>
+                    <input
+                      type="text"
+                      placeholder="Enter community name"
+                      className="text-gray-500 inline-flex h-6 w-full rounded-none border border-black p-4 text-sm tracking-wide outline-none placeholder:text-gray"
+                      onChange={(e) => setEmoji(e.target.value)}
+                    />
                   </div>
 
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="bg-blue-100 text-blue-900 hover:bg-blue-200 focus-visible:ring-blue-500 mr-4 inline-flex justify-center rounded-md border border-transparent border-black px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue/50"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Cancel{" "}
+                    </button>
+                    <button
+                      type="button"
+                      className="bg-blue-100 text-blue-900 hover:bg-blue-200 focus-visible:ring-blue-500 inline-flex justify-center rounded-md border border-transparent bg-blue px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue/50 "
                       onClick={closeModal}
                     >
-                      Got it, thanks!
+                      Create
                     </button>
                   </div>
                 </Dialog.Panel>
@@ -79,8 +90,7 @@ const CreateCommunity = () => {
         </Dialog>
       </Transition>
     </>
-  )
-}
+  );
+};
 
-
-export default CreateCommunity
+export default CreateCommunity;

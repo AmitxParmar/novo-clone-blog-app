@@ -1,10 +1,7 @@
-import React from 'react'
-
+import React from "react";
 
 const Activities = () => {
-  return (
-    <div>Activities</div>
-  )
-}
+  return <div className="">Activities</div>;
+};
 
 export default Activities;

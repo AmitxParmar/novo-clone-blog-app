@@ -2,15 +2,16 @@ import React from "react";
 import Link from "next/link";
 import { defaultImage } from "~/assets";
 import Image from "next/image";
-import Profile from "~/components/Modals/Profile"
+import Profile from "~/components/Modals/Profile";
+import { useSession } from "next-auth/react";
 
 const CTA = () => {
+  const { data: sessionData } = useSession();
+
   return (
     <div className="relative block flex-shrink-0 justify-end px-4 scrollbar sm:max-w-1/2 sm:flex-1/2 md:max-w-1/4 md:flex-1/2 lg:max-w-[33.33%] lg:flex-[0_0_33.33%] xl:flex-1/4">
-    
       <div className="mb-0 flex list-none flex-row items-center justify-end pl-0">
         {/* Messages Icon */}
-
         <div title="Messages" className="ml-2 rounded-full hover:bg-white">
           <Link
             href="/"
@@ -83,20 +84,23 @@ const CTA = () => {
           </Link>
         </div>
         {/* Profile */}
-        <Profile/>
-        <div title="Options" className="ml-2 rounded-full hover:bg-white">
-              <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-transparent object-contain p-0 text-[#212121] transition-[.3s]">
-                <span className="inline-flex items-center justify-center align-middle">
-                  <Image
-                    className="rounded-full"
-                    src={defaultImage}
-                    height={26}
-                    width={26}
-                    alt={"profile pic"}
-                  />
-                </span>
-              </div>
-            </div>
+        <Link
+          href={`/profile/${sessionData?.user.id ?? "randomId"}`}
+          title="Options"
+          className="ml-2 rounded-full hover:bg-white"
+        >
+          <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-transparent object-contain p-0 text-[#212121] transition-[.3s]">
+            <span className="inline-flex items-center justify-center align-middle">
+              <Image
+                className="rounded-full"
+                src={defaultImage}
+                height={26}
+                width={26}
+                alt={"profile pic"}
+              />
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   );

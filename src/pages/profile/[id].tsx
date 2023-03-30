@@ -1,25 +1,26 @@
+import { type User } from "@prisma/client";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import UserProfile from "~/components/profile";
+import About from "~/components/profile/About";
+import Activities from "~/components/profile/Activities";
+import { api } from "~/utils/api";
+import { useSession } from "next-auth/react";
 
 const Profile = () => {
-  const [profile, setProfile] = useState();
+  const { data: sessionData } = useSession();
+  const [profile, setProfile] = useState<User>();
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
-  const { id } = router.query;
-
-  useEffect(() => {
-    const userId = id;
-  }, [id]);
+  const userId = router.query.id;
 
   return (
-    /* Page body */
-    <div className="lg:pl-16">
-      {/* Style wrapper */}
-      <div className="flex w-full justify-center px-6 sm:flex-col sm:items-center md:flex-col lg:items-center xl:flex-row xl:px-6">
-        <UserProfile/>
-      </div>
+    /* Style wrapper: TODO: remove mt later */
+    <div className="flex w-full flex-col justify-center sm:items-center lg:items-center xl:flex-row xl:px-6">
+      {/* Style Divider */}
+      <About />
+      {/* Style Column */}
+      <Activities />
     </div>
   );
 };

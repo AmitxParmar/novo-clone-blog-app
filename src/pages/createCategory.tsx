@@ -1,40 +1,38 @@
-import React, { type PropsWithChildren, useState } from "react";
+/* import React, { type PropsWithChildren, useState } from "react";
 import { api } from "~/utils/api";
 import { signIn, useSession } from "next-auth/react";
 import ReactElement from "react";
-
-const CreateCategory: React.FC<PropsWithChildren> = () => {
+ */
+/* const CreateCategory: React.FC<PropsWithChildren> = () => {
   const { data: sessionData } = useSession();
-  const [title, setCategory] = useState<string>("");
-  const [emoji, setEmoji] = useState<string>("");
-
-  /* Get All categories */
-  const { data: categories, refetch: refetchCategories } =
+ */
+/* Get All categories */
+/*  const { data: categories, refetch: refetchCategories } =
     api.category.getAll.useQuery(undefined, {
       enabled: sessionData?.user != undefined,
     });
-
-  /* create Category function */
-  const createCategory = api.category.create.useMutation({
+ */
+/* create Category function */
+/*  const createCategory = api.category.create.useMutation({
     onSuccess: () => {
       void refetchCategories();
     },
   });
-
-  const handleSubmit = () => {
+ */
+/*  const handleSubmit = () => {
     // make
     console.log({ emoji, title });
     createCategory.mutate({
       emoji,
       title,
     });
-  };
+  }; */
 
-  return (
+/*  return (
     <>
       <button onClick={() => void signIn()}>Login</button>
 
-      <form onSubmit={handleSubmit} className="grid grid-rows-2 m-7 p-7 ">
+      <form onSubmit={handleSubmit} className="m-7 grid grid-rows-2 p-7 ">
         <input
           className="h-12 w-full bg-black tracking-widest text-white"
           type="text"
@@ -66,7 +64,7 @@ const CreateCategory: React.FC<PropsWithChildren> = () => {
         ))}
       </div>
     </>
-  );
-};
+  ); */
+//};
 
-export default CreateCategory;
+//export default CreateCategory;

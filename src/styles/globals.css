@@ -12,8 +12,24 @@
 
 @font-face {
   font-family: Graphik;
+  src: url("/public/fonts/GraphikMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Graphik;
   src: url("/public/fonts/GraphikSemibold.otf") format("opentype");
   font-weight: 600;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: Graphik;
+  src: url("/public/fonts/GraphikSuper.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -55,8 +71,6 @@ hr {
   border-image: initial;
 }
 
-element.style {}
-
 :focus:not(:focus-visible) {
   outline: none !important;
 }
@@ -97,9 +111,12 @@ div {
   display: block;
 }
 
-@media (min-width: 992px) html {
-  font-size: 16px;
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
 }
+
 
 
 html {

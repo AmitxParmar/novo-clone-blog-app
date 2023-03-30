@@ -1,7 +1,6 @@
 import React, { type PropsWithChildren } from "react";
 import Link from "next/link";
 
-
 const TrendingPost = () => {
   return (
     <div>
@@ -20,9 +19,10 @@ const TrendingPost = () => {
             </div>
             {/* Title */}
             {/* TODO: add line clamp here */}
-            <div className="my-2 mx-0 flex overflow-hidden break-words text-left text-xs font-normal leading-normal text-black">
+            <div className="my-2 mx-0 flex overflow-hidden break-words text-left text-xs font-normal leading-normal text-black line-clamp-3">
               Are you a student or a teacher? Host a UN Youth Climate Dialogue
-              with your class 📚
+              with your class 📚 Are you a student or a teacher? Host a UN Youth
+              Climate Dialogue with your class 📚
             </div>
             {/* Meta */}
             <div className="text-xs text-black">2d • 113 views</div>
