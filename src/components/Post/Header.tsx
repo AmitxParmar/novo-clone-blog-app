@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSession, signIn } from "next-auth/react";
-import { defaultImage } from "~/assets";
+import defaultImage from "public/DefaultProfilePic.jpg";
 
 /**
  * Post Header Component.

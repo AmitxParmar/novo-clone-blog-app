@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { defaultImage } from "~/assets";
+import defaultImage from "public/DefaultProfilePic.jpg";
 
 const ProfilePic = () => {
   return (

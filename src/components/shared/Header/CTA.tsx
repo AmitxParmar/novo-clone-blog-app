@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { defaultImage } from "~/assets";
+import defaultImage from "public/DefaultProfilePic.jpg";
 import Image from "next/image";
 import Profile from "~/components/Modals/Profile";
 import { useSession } from "next-auth/react";

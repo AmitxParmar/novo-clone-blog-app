@@ -1,9 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { useSession } from "next-auth/react";
-import { defaultImage } from "~/assets";
 import Link from "next/link";
-import Image from "next/image";
 
 const Profile = () => {
   const { data: sessionData } = useSession();
@@ -20,7 +18,7 @@ const Profile = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Button className={'bg-black text-white h-6 w-6'}>
+          <Menu.Button className={"h-6 w-6 bg-black text-white"}>
             HIiiii
           </Menu.Button>
           <Menu.Items className="divide-gray-100 absolute right-0 mt-2 w-56 origin-top-right divide-y rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">

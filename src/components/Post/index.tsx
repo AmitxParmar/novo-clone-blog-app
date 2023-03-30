@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Header from "./Header";
-import { defaultImage } from "~/assets";
 import Actions from "./Actions";
+import defaultImage from "public/DefaultProfilePic.jpg";
 
 const Post: React.FC = () => {
   return (

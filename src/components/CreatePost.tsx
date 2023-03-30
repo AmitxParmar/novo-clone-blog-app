@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import PostModal from "./Modals/CreatePost";
-import { defaultImage } from "~/assets";
+import defaultImage from "public/DefaultProfilePic.jpg";
 
 const CreatePost: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
