@@ -16,7 +16,7 @@ const Profile = () => {
 
   return (
     /* Style wrapper: TODO: remove mt later */
-    <div className="flex w-full flex-col justify-center sm:items-center lg:items-center xl:flex-row xl:px-6">
+    <div className="flex h-screen w-full flex-col justify-center sm:items-center lg:items-center xl:flex-row xl:px-6">
       {/* Style Divider */}
       <About />
       {/* Style Column */}
