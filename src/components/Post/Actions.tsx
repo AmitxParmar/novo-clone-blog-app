@@ -29,7 +29,7 @@ const Actions = () => {
     <div className="mt-4 flex items-center justify-between break-words text-sm text-dark">
       {/* REactions container */}
       <div className="relative mr-6 flex space-x-2 ">
-        {emojiArr.map(({ count, emoji }: EmojiArr, index: number): any => {
+        {emojiArr.map(({ count, emoji }: EmojiArr, index: number) => {
           return <EmojiTag count={count} emoji={emoji} key={index} />;
         })}
         <button
