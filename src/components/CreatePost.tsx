@@ -15,13 +15,13 @@ const CreatePost: React.FC = () => {
 
   return (
     <div className="mb-4 block font-graphik font-normal text-gray-dark antialiased">
-      <PostModal setIsOpen={setIsOpen} isOpen={isOpen} openModal={openModal} />
+      <PostModal setIsOpen={setIsOpen} isOpen={isOpen} />
       <div className="relative mb-2.5 flex min-w-0 flex-col break-words rounded-xl border-0 border-solid border-[#e0e0e0] bg-white shadow-[0_2px_8px_rgb(0_0_0/12%)]">
         {/* background-clip: border-box */}
         <div className="min-h-[1px]  flex-[1_1_auto] break-words p-4 xl:p-8">
           <div className="flex items-center break-words">
             {/* User Profile Icon */}
-            <div className="relative h-8 w-8 rounded-full border-[0px] border-solid border-white bg-white ">
+            <div className="relative h-8 w-8 rounded-full border-[0px] border-solid border-white bg-white">
               <Image
                 alt={`User Image`}
                 src={defaultImage}

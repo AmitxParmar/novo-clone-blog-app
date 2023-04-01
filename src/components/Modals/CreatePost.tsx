@@ -11,8 +11,6 @@ import { api } from "~/utils/api";
 
 type PostModal = {
   isOpen: boolean;
-  openModal: () => void;
-  closeModal?: () => void;
   setIsOpen: (Boolean: boolean) => void;
 };
 
@@ -20,6 +18,7 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [categoryId, setCategoryId] = useState("clfob8zr60001wlbcucb8veky");
+
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
@@ -27,13 +26,14 @@ const PostModal: FC<PostModal> = ({ isOpen, setIsOpen }) => {
   const createPost = api.post.create.useMutation({});
   const invalid = content === "" || title === "";
   console.log(invalid);
+  // handleCancel button
   const cancelAction = () => {
     setIsOpen(false);
     setTitle("");
     setContent("");
     setCategoryId("clfob8zr60001wlbcucb8veky");
   };
-
+  // handle Post button action
   const postAction = () => {
     setIsOpen(false);
     createPost.mutate({
